@@ -2,13 +2,13 @@
 <html lang="en">
 
 <!-- Head tag -->
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content>
-    <meta name="keyword" content>
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
     <link rel="shortcut icon" href="/img/ironman-draw.png">
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -18,13 +18,15 @@
         
     </title>
 
-    <link rel="canonical" href="http://joanliao.space/tags/">
+    <link rel="canonical" href="https://joanliao.space/tags/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 
     <!-- Custom CSS --> 
     <link rel="stylesheet" href="/css/beantech.min.css">
+
+    <link rel="stylesheet" href="/css/donate.css">
     
     <!-- Pygments Highlight CSS -->
     <link rel="stylesheet" href="/css/highlight.css">
@@ -69,13 +71,9 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('/img/header_img/tag-bg.png')
+            background-image: url('/img/header_img/tag.png')
             /*page*/
         
-    }
-    
-    #signature{
-        background-image: url('/img/signature/BeanTechSign-white.png');
     }
     
 </style>
@@ -132,8 +130,11 @@
                     
 
                         
+                    
+
+                        
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -146,11 +147,8 @@
                     
 
                         
-                    
-
-                        
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -202,7 +200,11 @@
                 
                     <a href="#Hexo" title="Hexo" rel="1">Hexo</a>
                 
-                    <a href="#Blog" title="Blog" rel="1">Blog</a>
+                    <a href="#test" title="test" rel="1">test</a>
+                
+                    <a href="#測試" title="測試" rel="1">測試</a>
+                
+                    <a href="#first post" title="first post" rel="1">first post</a>
                 
             </div>
 
@@ -219,9 +221,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/2017/03/18/hexo-theme-beantech/">
+                     <a href="/article/hexo-theme-huweihuang/">
                         <h2 class="post-title">
-                            [Hexo] Theme BeanTech
+                            [Hexo] Theme HuWeihuang
                         </h2>
                         
                             <h3 class="post-subtitle">
@@ -236,8 +238,8 @@
             </div>
             
             <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="Blog">
-                    <span class="tag-text">Blog</span>
+                <span class="fa fa-tag listing-seperator" id="test">
+                    <span class="tag-text">test</span>
                 </span>
                 
                   <!-- <li class="listing-item">
@@ -245,14 +247,54 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/2017/03/18/hexo-theme-beantech/">
+                     <a href="/article/測試/">
                         <h2 class="post-title">
-                            [Hexo] Theme BeanTech
+                            測試
                         </h2>
                         
-                            <h3 class="post-subtitle">
-                                This is hexo theme Demo.
-                            </h3>
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="測試">
+                    <span class="tag-text">測試</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/article/測試/">
+                        <h2 class="post-title">
+                            測試
+                        </h2>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="first post">
+                    <span class="tag-text">first post</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/article/測試/">
+                        <h2 class="post-title">
+                            測試
+                        </h2>
                         
                     </a>
                     <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
@@ -327,15 +369,15 @@
                 <p class="copyright text-muted">
                     Copyright &copy; Joan Liao 2019 
                     <br>
-                    Theme by <a href="http://huangxuan.me">Hux</a> 
+                    Theme by <a href="http://beantech.org">BeanTech</a> 
                     <span style="display: inline-block; margin: 0 5px;">
                         <i class="fa fa-heart"></i>
                     </span> 
-                    re-Ported by <a href="http://beantech.org">BeanTech</a> | 
+                    re-Ported by <a href="http://www.huweihuang.com">胡伟煌</a> | 
                     <iframe
                         style="margin-left: 2px; margin-bottom:-5px;"
                         frameborder="0" scrolling="0" width="91px" height="20px"
-                        src="https://ghbtns.com/github-btn.html?user=YenYuHsuan&repo=hexo-theme-beantech&type=star&count=true" >
+                        src="https://ghbtns.com/github-btn.html?user=huweihuang&repo=hexo-theme-huweihuang&type=star&count=true" >
                     </iframe>
                 </p>
             </div>
@@ -388,7 +430,7 @@
 <script>
     // only load tagcloud.js in tag.html
     if($('#tag_cloud').length !== 0){
-        async("http://joanliao.space/js/jquery.tagcloud.js",function(){
+        async("https://joanliao.space/js/jquery.tagcloud.js",function(){
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {start: '#bbbbee', end: '#0085a1'},
@@ -423,7 +465,7 @@
 	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
     <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
 <!-- Image to hack wechat -->
-<img src="http://joanliao.space/img/icon_wechat.png" width="0" height="0" />
+<img src="https://joanliao.space/img/icon_wechat.png" width="0" height="0" />
 <!-- Migrate from head to bottom, no longer block render and still work -->
 
 </body>
