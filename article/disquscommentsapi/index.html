@@ -71,7 +71,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('/img/article_header/article_bg.jpg')
+            background-image: url('/img/article_header/bookandcatlight.jpg')
             /*post*/
         
     }
@@ -92,7 +92,7 @@
                             
                         </div>
                         <h1>How to set Disqus comments API in Hexo blog</h1>
-                        <h2 class="subheading"></h2>
+                        <h2 class="subheading">with theme hexo-theme-huweihuang</h2>
                         <span class="meta">
                             Posted by Joan Liao on
                             2019-10-28
@@ -214,30 +214,23 @@
 
                 <h2 id="如何在-hexo-的-hexo-theme-huweihuang-主題中使用-disqus-的功能">如何在 hexo 的 hexo-theme-huweihuang 主題中使用 Disqus 的功能：</h2>
 <h4 id="1-先到-disqus-註冊帳戶">1. 先到 Disqus 註冊帳戶</h4>
-<pre><code>![disqus01](/img/disqus/disqus01.png &quot;disqus01&quot;)
-![disqus02](/img/disqus/disqus02.png &quot;disqus02&quot;)
-</code></pre>
+<p><img src="/img/disqus/disqus01.png" alt="disqus01" title="disqus01"><br>
+<img src="/img/disqus/disqus02.png" alt="disqus02" title="disqus02"></p>
 <h4 id="2-選擇-i-want-to-install-disqus-on-my-site">2. 選擇 “ I want to install Disqus on my site ”</h4>
-<pre><code>![disqus03](/img/disqus/disqus03.png &quot;disqus03&quot;)
-</code></pre>
+<p><img src="/img/disqus/disqus03.png" alt="disqus03" title="disqus03"></p>
 <h4 id="3-填寫-website-name-這裡建議先填寫完整的網址-這樣填寫欄下方出現的網址也會是完整的網址">3. 填寫 Website Name ， 這裡建議先填寫完整的網址 ， 這樣填寫欄下方出現的網址也會是完整的網址</h4>
 <p>好啦其實是我強迫症 XD ，填寫完後點選 “ Create Site ”<br>
 <img src="/img/disqus/disqus04.png" alt="disqus04" title="disqus04"></p>
 <h4 id="4-這裡除非有付費功能的需求否則直接選擇-basic-基本免費方案就好">4. 這裡除非有付費功能的需求否則直接選擇 Basic 基本免費方案就好</h4>
-<pre><code>![disqus05](/img/disqus/disqus05.png &quot;disqus05&quot;)
-</code></pre>
+<p><img src="/img/disqus/disqus05.png" alt="disqus05" title="disqus05"></p>
 <h4 id="5-因為-hexo-不在他列出的選項之中所以選擇最下方的-i-dont-see-my-platform-listed-install-manually-with-universal-code">5. 因為 Hexo 不在他列出的選項之中，所以選擇最下方的“ I don’t see my platform listed, install manually with Universal Code ”</h4>
-<pre><code>![disqus06](/img/disqus/disqus06.png &quot;disqus06&quot;)
-</code></pre>
+<p><img src="/img/disqus/disqus06.png" alt="disqus06" title="disqus06"></p>
 <h4 id="6-這裡有兩段-code-可以複製第一段後面會用到之後點選-configure-進入設定頁面">6. 這裡有兩段 code 可以複製第一段，後面會用到，之後點選 “ Configure ” 進入設定頁面</h4>
-<pre><code>![disqus07](/img/disqus/disqus07.png &quot;disqus07&quot;)
-</code></pre>
+<p><img src="/img/disqus/disqus07.png" alt="disqus07" title="disqus07"></p>
 <h4 id="7-這裡的-website-name-可以打你方便設定的名字就好下方-website-url-則輸入你的-blog-網址輸入完點選-complete-setup">7. 這裡的 Website Name 可以打你方便設定的名字就好，下方 Website URL 則輸入你的 Blog 網址，輸入完點選 “ Complete Setup ”</h4>
-<pre><code>![disqus08](/img/disqus/disqus08.png &quot;disqus08&quot;)
-</code></pre>
+<p><img src="/img/disqus/disqus08.png" alt="disqus08" title="disqus08"></p>
 <h4 id="8-這裡的影片中會提到一些細節設定有需要再跟著影片去設定囉">8. 這裡的影片中會提到一些細節設定，有需要再跟著影片去設定囉！</h4>
-<pre><code>![disqus09](/img/disqus/disqus09.png &quot;disqus09&quot;)
-</code></pre>
+<p><img src="/img/disqus/disqus09.png" alt="disqus09" title="disqus09"></p>
 <h4 id="9-接下來移駕-visual-studio-code-或其他程式碼編輯器開啟-_configyml-檔案">9. 接下來，移駕 Visual Studio Code 或其他程式碼編輯器，開啟 _config.yml 檔案</h4>
 <p>加入以下這段（記得冒號“ : ”後面要空格）：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">disqus:</span></span><br><span class="line"><span class="attr">    enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    shortname:</span> <span class="string">joanliao</span> <span class="comment">#剛剛設定的 Websitename</span></span><br><span class="line"><span class="attr">    count:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
