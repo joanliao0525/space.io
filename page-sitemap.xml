@@ -8,7 +8,21 @@
     
     <url>
         <loc>https://joanliao.space/about/</loc>
-        <lastmod>2019-10-28T09:23:11.709Z</lastmod>
+        <lastmod>2019-10-29T04:46:24.140Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://joanliao.space/tags/</loc>
+        <lastmod>2019-10-29T04:41:13.886Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://joanliao.space/archive/</loc>
+        <lastmod>2019-10-29T04:41:07.107Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -16,20 +30,6 @@
     <url>
         <loc>https://joanliao.space/404.html</loc>
         <lastmod>2019-10-23T12:28:54.535Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://joanliao.space/tags/</loc>
-        <lastmod>2019-10-23T06:56:08.849Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://joanliao.space/archive/</loc>
-        <lastmod>2019-10-23T06:56:08.795Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
