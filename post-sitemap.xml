@@ -7,16 +7,8 @@
     </url>
 
     <url>
-        <loc>https://joanliao.space/article/changeicon/</loc>
-        <lastmod>2019-11-01T06:48:24.512Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://joanliao.space/article/vuepractice1/</loc>
-        <lastmod>2019-11-01T06:45:51.751Z</lastmod>
+        <lastmod>2019-11-01T06:58:10.834Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -24,7 +16,15 @@
 
     <url>
         <loc>https://joanliao.space/article/disquscommentsapi/</loc>
-        <lastmod>2019-11-01T06:40:03.305Z</lastmod>
+        <lastmod>2019-11-01T06:51:42.797Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://joanliao.space/article/changeicon/</loc>
+        <lastmod>2019-11-01T06:48:24.512Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
