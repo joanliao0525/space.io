@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          哈囉 - Joan&#39;s space
+          How to use Bootstrap in Rails 6 ? - Joan&#39;s space
         
     </title>
 
-    <link rel="canonical" href="https://joanliao.space/article/哈囉/">
+    <link rel="canonical" href="https://joanliao.space/article/howtousebootstrapinrails6/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -88,14 +88,16 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#journal" title="journal">journal</a>
+                              <a class="tag" href="/tags/#tech" title="tech">tech</a>
+                            
+                              <a class="tag" href="/tags/#Ruby on Rails" title="Ruby on Rails">Ruby on Rails</a>
                             
                         </div>
-                        <h1>哈囉</h1>
-                        <h2 class="subheading"></h2>
+                        <h1>How to use Bootstrap in Rails 6 ?</h1>
+                        <h2 class="subheading">如何在 Rails 6 中使用 Bootstrap ?</h2>
                         <span class="meta">
                             Posted by Joan Liao on
-                            2019-09-02
+                            2019-11-01
                         </span>
                     </div>
                 
@@ -212,10 +214,21 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h2 id="開心">開心</h2>
-<p>第一次從 terminal 建立自己的 blog ，雖然經歷了很多次嘗試，<br>
-也重複建立和刪除了很多次 GitHub Repo ，但還是覺得很有成就感！<br>
-接下來會在此更新文章，請大家多多指教，有問題歡迎指正！</p>
+                <h4 id="1-首先建立一個專案">1. 首先建立一個專案</h4>
+<pre><code>$ rails new project_name
+</code></pre>
+<h4 id="2-用-yarn-安裝-bootstrap-及相關套件">2. 用 Yarn 安裝 Bootstrap 及相關套件</h4>
+<pre><code>$ cd project_name
+$ yarn add bootstrap jquery popper.js
+</code></pre>
+<h4 id="3-設定webpacker">3. 設定Webpacker</h4>
+<p>開啟 config/webpack/environment.js, 加入下方程式碼：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; environment &#125; = <span class="built_in">require</span>(<span class="string">'@rails/webpacker'</span>);</span><br><span class="line"><span class="keyword">const</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>);</span><br><span class="line">environment.plugins.append(</span><br><span class="line"><span class="string">'Provide'</span>,</span><br><span class="line"><span class="keyword">new</span> webpack.ProvidePlugin(&#123;</span><br><span class="line">$: <span class="string">'jquery'</span>,</span><br><span class="line">jQuery: <span class="string">'jquery'</span>,</span><br><span class="line">Popper: [<span class="string">'popper.js'</span>, <span class="string">'default'</span>],</span><br><span class="line">&#125;)</span><br><span class="line">);</span><br><span class="line"><span class="built_in">module</span>.exports = environment;</span><br></pre></td></tr></table></figure>
+<h4 id="4-開啟檔案appjavascriptpacksapplicationjs-加入下方程式碼">4. 開啟檔案：app/javascript/packs/application.js, 加入下方程式碼：</h4>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">'bootstrap'</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="5-打開-appassetsstylesheetsapplicationcss-加入下方程式碼">5. 打開 app/assets/stylesheets/application.css, 加入下方程式碼：</h4>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">import</span> <span class="string">'bootstrap/scss/bootstrap'</span></span><br></pre></td></tr></table></figure>
+<p>執行完以上步驟就可以開始使用 bootstrap 了。</p>
 
                 
 
@@ -223,10 +236,10 @@
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/article/等待人生/" data-toggle="tooltip" data-placement="top" title="等待人生">&larr; Previous Post</a>
-                        </li>
                     
+                        <li class="next">
+                            <a href="/article/changeicon/" data-toggle="tooltip" data-placement="top" title="How to change site icon ?">Next Post &rarr;</a>
+                        </li>
                     
                 </ul>
 
@@ -272,7 +285,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#開心"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">&#x958B;&#x5FC3;</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-首先建立一個專案"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">1. &#x9996;&#x5148;&#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x5C08;&#x6848;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-用-yarn-安裝-bootstrap-及相關套件"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">2. &#x7528; Yarn &#x5B89;&#x88DD; Bootstrap &#x53CA;&#x76F8;&#x95DC;&#x5957;&#x4EF6;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-設定webpacker"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">3. &#x8A2D;&#x5B9A;Webpacker</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-開啟檔案appjavascriptpacksapplicationjs-加入下方程式碼"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">4. &#x958B;&#x555F;&#x6A94;&#x6848;&#xFF1A;app/javascript/packs/application.js, &#x52A0;&#x5165;&#x4E0B;&#x65B9;&#x7A0B;&#x5F0F;&#x78BC;&#xFF1A;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#5-打開-appassetsstylesheetsapplicationcss-加入下方程式碼"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">5. &#x6253;&#x958B; app/assets/stylesheets/application.css, &#x52A0;&#x5165;&#x4E0B;&#x65B9;&#x7A0B;&#x5F0F;&#x78BC;&#xFF1A;</span></a></li></ol>
         
         </div>
       </aside>
@@ -292,7 +305,9 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#journal" title="journal">journal</a>
+                          <a class="tag" href="/tags/#tech" title="tech">tech</a>
+                        
+                          <a class="tag" href="/tags/#Ruby on Rails" title="Ruby on Rails">Ruby on Rails</a>
                         
                     </div>
                 </section>
