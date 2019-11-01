@@ -2,15 +2,29 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
+        <loc>https://joanliao.space/tags/vue-js/</loc>
+        <lastmod>2019-11-01T04:48:37.488Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://joanliao.space/tags/journal/</loc>
-        <lastmod>2019-10-28T09:44:12.040Z</lastmod>
+        <lastmod>2019-11-01T05:33:42.322Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://joanliao.space/tags/tech/</loc>
-        <lastmod>2019-10-30T05:58:20.001Z</lastmod>
+        <lastmod>2019-11-01T06:19:50.296Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://joanliao.space/tags/hexo/</loc>
+        <lastmod>2019-11-01T06:19:50.296Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
