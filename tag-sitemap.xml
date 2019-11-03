@@ -9,13 +9,6 @@
     </url>
 
     <url>
-        <loc>https://joanliao.space/tags/vue-js/</loc>
-        <lastmod>2019-11-01T07:08:41.309Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://joanliao.space/tags/hexo/</loc>
         <lastmod>2019-11-03T15:56:17.728Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -23,15 +16,22 @@
     </url>
 
     <url>
-        <loc>https://joanliao.space/tags/tech/</loc>
+        <loc>https://joanliao.space/tags/Ruby-on-Rails/</loc>
         <lastmod>2019-11-03T16:00:00.001Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://joanliao.space/tags/Ruby-on-Rails/</loc>
-        <lastmod>2019-11-03T16:00:00.001Z</lastmod>
+        <loc>https://joanliao.space/tags/tech/</loc>
+        <lastmod>2019-11-03T16:16:12.996Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://joanliao.space/tags/Vue-js/</loc>
+        <lastmod>2019-11-03T16:16:12.996Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
