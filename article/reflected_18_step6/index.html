@@ -25,11 +25,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          About - Joan&#39;s space
+          Reflected on my past mistakes. - Joan&#39;s space
         
     </title>
 
-    <link rel="canonical" href="https://joanliao.space/about/">
+    <link rel="canonical" href="https://joanliao.space/article/reflected_18_step6/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -82,8 +82,8 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('/img/header_img/starinbottle.jpg')
-            /*page*/
+            background-image: url('/img/article_header/bookandcatlight.jpg')
+            /*post*/
         
     }
     
@@ -100,10 +100,22 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 
-                    <div class="site-heading">
-                        <h1>About</h1>
-                        <!--<hr class="small">-->
-                        <span class="subheading">“ Try not to become a man of success, but rather try to become a man of value. ” - Albert Einstein </span>
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#tech" title="tech">tech</a>
+                            
+                              <a class="tag" href="/tags/#Ruby on Rails" title="Ruby on Rails">Ruby on Rails</a>
+                            
+                              <a class="tag" href="/tags/#introspection" title="introspection">introspection</a>
+                            
+                        </div>
+                        <h1>Reflected on my past mistakes.</h1>
+                        <h2 class="subheading">Those fooly mistakes i made in my project &#39;Task management&#39; part.1</h2>
+                        <span class="meta">
+                            Posted by Joan Liao on
+                            2019-11-07
+                        </span>
                     </div>
                 
 
@@ -206,239 +218,272 @@
 
 
     <!-- Main Content -->
-    <!-- Main Content -->
-<div class="container">
-    <div class="row">
-        
+    <!-- Modify by Yu-Hsuan Yen -->
 
-<!-- USE SIDEBAR -->
-    <!-- Post Container -->
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
             <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-            
-                <h3 id="喜歡的名言">喜歡的名言</h3>
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h4 id="第一次自己從頭生成一個專案犯的錯誤實在是自己都看不下去">第一次自己從頭生成一個專案，犯的錯誤實在是自己都看不下去，</h4>
+<h4 id="所以就來寫個匯總吧">所以就來寫個匯總吧😂</h4>
+<p><img src="https://imgur.com/UvVNoRp.png" alt="step06-1/7" title="dstep06-1/7"><br>
+助教大人🐤提點：</p>
 <blockquote>
-<p>“Life is a mirror and will reflect back to the thinker what he thinks into it.” — Ernest Holmes</p>
+<p>「status 是 task 的一個欄位不是 table ，不應該出現在 table 的關聯設定裡。<br>
+建議閱讀：<a href="https://rails.ruby.tw/association_basics.html" target="_blank" rel="noopener">Active Record 關聯</a>」</p>
 </blockquote>
-<h3 id="關於我">關於我</h3>
+<p>菜鳥🤦🏻‍♀️心得：</p>
 <blockquote>
-<p>2019年，我踏上了人生的新旅程，對前方即將遇到的事物充滿期待，<br>
-也希望在經歷了種種考驗後，能夠有所成長。</p>
+<p>在建立 model 時，欄位屬性鍵入 references，會自動產生關聯，所以再決定欄位屬性時要注意，若該欄位不是外部鍵，則無需使用 references 使用 integer 即可。</p>
 </blockquote>
-<h3 id="參與社團">參與社團</h3>
+<p><img src="https://imgur.com/5Yu95zc.png" alt="step06-2/7" title="dstep06-2/7"><br>
+助教大人🐤提點：</p>
 <blockquote>
-<p><a href="https://www.facebook.com/rubymokumokukai/" target="_blank" rel="noopener">Ruby 默默會</a></p>
+<p>User 有很多的 Task ? 似乎漏掉關聯設定</p>
 </blockquote>
-<h3 id="興趣">興趣</h3>
+<p>菜鳥🤦🏻‍♀️心得：</p>
 <blockquote>
-<p>閱讀、音樂、貓、探索未知</p>
+<p>粗心沒有檢查到，自己寫的 code 要檢查再檢查。</p>
 </blockquote>
-<h3 id="聯絡方式">聯絡方式</h3>
+<p><img src="https://imgur.com/76rPeWP.png" alt="step06-3/7" title="dstep06-3/7"><br>
+助教大人🐤提點：</p>
 <blockquote>
-<p>Email：<a href="mailto:joanliao0525@joanliao.space">joanliao0525@joanliao.space</a></p>
+<p>view 不應該有 Task.new ，MVC 應該是將 controller 的變數 @task 放到 View<br>
+建議閱讀：<a href="https://railsbook.tw/chapters/10-mvc.html" target="_blank" rel="noopener">Model、View、Controller 三分天下</a></p>
+</blockquote>
+<p>菜鳥🤦🏻‍♀️心得：</p>
+<blockquote>
+<p>原本是為了功能正常顯示，但是這樣的做法是錯誤的，不只要考慮到可讀性，<br>
+還要考慮到維護的方便性以及 code 本身的慣例及用法，還需研讀更多文件。</p>
+</blockquote>
+<p><img src="https://imgur.com/EF72RTE.png" alt="step06-4/7" title="dstep06-4/7"><br>
+助教大人🐤提點：</p>
+<blockquote>
+<p>這裡的縮排看起來是四格空白，rails 慣例是兩個空白</p>
+</blockquote>
+<p>菜鳥🤦🏻‍♀️心得：</p>
+<blockquote>
+<p>可以直接在 VSCode 或其他程式碼編輯器中設定 tab 縮排的預設空格數，<br>
+且在寫 code 的過程中注意縮排及格式，遵照 Ruby on Rails 慣例走。</p>
+</blockquote>
+<p><img src="https://imgur.com/pae7EAw.png" alt="step06-5/7" title="dstep06-5/7"><br>
+助教大人🐤提點：</p>
+<blockquote>
+<p>建議這下面加一行空白增加可讀性</p>
+</blockquote>
+<p>菜鳥🤦🏻‍♀️心得：</p>
+<blockquote>
+<p>隨時檢查檔案內容是否遵照 Ruby on Rails 慣例，並且注意可讀性、舒適性。</p>
+</blockquote>
+<p><img src="https://imgur.com/3CeOycC.png" alt="step06-6/7" title="dstep06-6/7"><br>
+助教大人🐤提點：</p>
+<blockquote>
+<p><code>permit(:title,:description)</code> 這邊習慣上會寫這樣，<br>
+<code>permit(:title, :description)</code> 中間會多一個空格增加可讀性</p>
+</blockquote>
+<p>菜鳥🤦🏻‍♀️心得：</p>
+<blockquote>
+<p>同樣隨時檢查檔案內容是否遵照 Ruby on Rails 慣例，並且注意可讀性、舒適性。</p>
+</blockquote>
+<p><img src="https://imgur.com/1q6uNBK.png" alt="step06-7/7" title="dstep06-7/7"><br>
+助教大人🐤提點：</p>
+<blockquote>
+<p>注意縮排，但是有個問題，為什麼一直出現沒看過的新增，理論上一支 pr 除非被要求更改，<br>
+不然不會一直出現沒看過的新增檔案，還是說這些修改應該是下一隻 pr 的？ＱＱ</p>
+<ul>
+<li>讓應該在下一隻 pr 裡的變更不要出現在這個 pr 裡，</li>
+<li><code>git reset</code> 到想要的節點</li>
+<li><code>git stash -u</code> 可以暫存變更(-u 包含 untracked files)</li>
+<li><code>git stash pop</code> 或 <code>git stash apply</code> 可以拿出暫存(pop 拿出來之後 stash list 就不會有了)</li>
+<li>假如是想放在其他分支上以後也可以用 <code>git cherry-pick</code> 撿到想要的分支上。<br>
+建議閱讀：<a href="https://5xruby.tw/posts/git-interview" target="_blank" rel="noopener">Git 面試題</a></li>
+</ul>
+</blockquote>
+<p>菜鳥🤦🏻‍♀️心得：</p>
+<blockquote>
+<p>要多練習 git 指令，不要浪費好用的工具。</p>
+</blockquote>
+<p>助教大人🐤提點：</p>
+<blockquote>
+<p>修改好的話可以點 resolve conversation，這樣就可以知道哪些已經修改好了哪些還沒。</p>
+</blockquote>
+<p>菜鳥🤦🏻‍♀️心得：</p>
+<blockquote>
+<p>有空可以多多使用 GitHub 發掘功能，不要浪費好用的工具。</p>
 </blockquote>
 
+                
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/article/howtousebootstrapinrails6/" data-toggle="tooltip" data-placement="top" title="How to use Bootstrap in Rails 6 ?">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
 
                 <br>
 
+                <!--打赏-->
+                
+                <!--打赏-->
+
+                <br>
+                <!--分享-->
+                <!-- 
+                    <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
+                    <! --  css & js -- >
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                 -->
+                <!--分享-->
+                <br>                       
+                
                 <!-- require APlayer -->
                 
 
-                <!-- 如果开启评论功能 -->
+                <!-- disqus comment start -->
                 
-                    <hr>
-
-                    
-
-                    
-
-                    
-
-                    
-
-                    
-
-                    
-
+                <!-- disqus comment end -->
+                <div id="disqus_thread"></div>
                 
             </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
 
-          <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
+  
+    <style>
+      span.toc-nav-number{
+        display: none
+      }
+    </style>
+  
     
-        <!-- Featured Tags -->
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#第一次自己從頭生成一個專案犯的錯誤實在是自己都看不下去"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">&#x7B2C;&#x4E00;&#x6B21;&#x81EA;&#x5DF1;&#x5F9E;&#x982D;&#x751F;&#x6210;&#x4E00;&#x500B;&#x5C08;&#x6848;&#xFF0C;&#x72AF;&#x7684;&#x932F;&#x8AA4;&#x5BE6;&#x5728;&#x662F;&#x81EA;&#x5DF1;&#x90FD;&#x770B;&#x4E0D;&#x4E0B;&#x53BB;&#xFF0C;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#所以就來寫個匯總吧"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">&#x6240;&#x4EE5;&#x5C31;&#x4F86;&#x5BEB;&#x500B;&#x532F;&#x7E3D;&#x5427;&#x1F602;</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
 
-<section>
-    <!-- no hr -->
-    <h5><a href="/tags/">FEATURED TAGS</a></h5>
-    <div class="tags">
-        
-            
-            <a href="/tags/#tech" title="tech" rel="6">tech</a>
-            
-        
-            
-            <a href="/tags/#hexo" title="hexo" rel="2">hexo</a>
-            
-        
-            
-            <a href="/tags/#Ruby on Rails" title="Ruby on Rails" rel="2">Ruby on Rails</a>
-            
-        
-            
-            <a href="/tags/#introspection" title="introspection" rel="1">introspection</a>
-            
-        
-            
-            <a href="/tags/#journal" title="journal" rel="2">journal</a>
-            
-        
-            
-            <a href="/tags/#Vue.js" title="Vue.js" rel="1">Vue.js</a>
-            
-        
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#tech" title="tech">tech</a>
+                        
+                          <a class="tag" href="/tags/#Ruby on Rails" title="Ruby on Rails">Ruby on Rails</a>
+                        
+                          <a class="tag" href="/tags/#introspection" title="introspection">introspection</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://axelchen.com" target="_blank">Axel&#39;s blog</a></li>
+                    
+                        <li><a href="https://a-min.art" target="_blank">Aimee&#39;s blog</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
     </div>
-</section>
+</article>
+<script>
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://joanliao.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-    <h5><a href="/about/">ABOUT ME</a></h5>
-    <div class="short-about">
 
-        
-            <img id = "avatar_pic" src="/img/avatar/joan.jpg" />
-        
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: '➜' 
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
 
-        
-            <p>“Life is a mirror and will reflect back to the thinker what he thinks into it.” — Ernest Holmes</p>
-        
 
-        <!-- SNS Link -->
-        <ul class="list-inline">
-            
-            
-                <li>
-                    <a target="_blank" href="https://twitter.com/AAOcuttle">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-            
-
-            
-
-            
-                <li>
-                    <a target="_blank" href="https://www.facebook.com/joanliao0525">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-
-            
-                <li>
-                    <a target="_blank"  href="https://github.com/joanliao0525">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-            
-            
-            
-                <li>
-                    <a target="_blank"  href="https://www.linkedin.com/in/joan-liao-344363aa">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-        </ul>
-    </div>
-</section>
-
-        <hr>
-    
-        
-  <h5>RECENT POSTS</h3>
-  <div class="widget">
-    <ul>
-      
-        <li>
-          <a href="/article/reflected_18_step6/">Reflected on my past mistakes.</a>
-        </li>
-      
-        <li>
-          <a href="/article/howtousebootstrapinrails6/">How to use Bootstrap in Rails 6 ?</a>
-        </li>
-      
-        <li>
-          <a href="/article/changeicon/">How to change site icon ?</a>
-        </li>
-      
-        <li>
-          <a href="/article/vuejs-biaoyansu-note01/">Vue.js 筆記 - 01</a>
-        </li>
-      
-        <li>
-          <a href="/article/disquscommentsapi/">How to set Disqus comments API in Hexo blog ?</a>
-        </li>
-      
-    </ul>
-  </div>
-
-        <hr>
-    
-        <!-- Friends Blog -->
-
-<h5>FRIENDS</h5>
-<ul class="list-inline">
-
-    
-        <li><a href="https://axelchen.com" target="_blank">Axel&#39;s blog</a></li>
-    
-        <li><a href="https://a-min.art" target="_blank">Aimee&#39;s blog</a></li>
-    
-</ul>
-
-        <hr>
-    
-        
-    <h5>ARCHIVES</h5>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a><span class="archive-list-count">1</span></li></ul>
-    </div>
-
-        <hr>
-    
-</div>
-
-        
-    </div>
-</div>
+<!-- chrome Firefox 中文锚点定位失效-->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<!-- smooth scroll behavior polyfill  -->
+<script type="text/javascript" src="/js/smoothscroll.js"></script>
+<script>
+        $('#toc').on('click','a',function(a){
+            // var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
+            // console.log(window.navigator.userAgent,isChrome)
+                // if(isChrome) {
+                    // console.log(a.currentTarget.outerHTML);
+                    // console.log($(a.currentTarget).attr("href"));
+                    //跳转到指定锚点
+                    // document.getElementById(a.target.innerText.toLowerCase()).scrollIntoView(true);
+                    document.getElementById($(a.currentTarget).attr("href").replace("#","")).scrollIntoView({behavior: 'smooth' });
+                // }
+        })  
+</script>
 
 
     <!-- Footer -->
