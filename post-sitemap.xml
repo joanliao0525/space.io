@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>https://joanliao.space/article/disquscommentsapi/</loc>
+        <lastmod>2019-11-08T07:58:51.259Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://joanliao.space/article/reflected_18_step6/</loc>
         <lastmod>2019-11-07T07:24:15.992Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -41,14 +49,6 @@
     <url>
         <loc>https://joanliao.space/article/changeicon/</loc>
         <lastmod>2019-11-03T15:56:17.728Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://joanliao.space/article/disquscommentsapi/</loc>
-        <lastmod>2019-11-01T06:51:42.797Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

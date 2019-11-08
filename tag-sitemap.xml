@@ -9,22 +9,8 @@
     </url>
 
     <url>
-        <loc>https://joanliao.space/tags/hexo/</loc>
-        <lastmod>2019-11-03T15:56:17.728Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://joanliao.space/tags/Vue-js/</loc>
         <lastmod>2019-11-05T04:24:29.928Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://joanliao.space/tags/tech/</loc>
-        <lastmod>2019-11-07T07:24:15.992Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -39,6 +25,20 @@
     <url>
         <loc>https://joanliao.space/tags/introspection/</loc>
         <lastmod>2019-11-07T07:24:15.992Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://joanliao.space/tags/tech/</loc>
+        <lastmod>2019-11-08T07:58:51.259Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://joanliao.space/tags/hexo/</loc>
+        <lastmod>2019-11-08T07:58:51.259Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

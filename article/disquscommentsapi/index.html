@@ -19,7 +19,7 @@
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="keyword"  content="joan liao joanliao youyuliao youyu">
+    <meta name="keyword"  content="joan liao">
     <link rel="shortcut icon" href="/img/icon/whale-tail.png">
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -250,9 +250,9 @@
 <p><img src="https://imgur.com/D2TJKtK.png" alt="disqus09" title="disqus09"></p>
 <h4 id="9-接下來移駕-visual-studio-code-或其他程式碼編輯器開啟-_configyml-檔案">9. 接下來，移駕 Visual Studio Code 或其他程式碼編輯器，開啟 _config.yml 檔案</h4>
 <p>加入以下這段（記得冒號“ : ”後面要空格）：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">disqus:</span></span><br><span class="line"><span class="attr">    enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    shortname:</span> <span class="string">joanliao</span> <span class="comment">#剛剛設定的 Websitename</span></span><br><span class="line"><span class="attr">    count:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">disqus:</span></span><br><span class="line"><span class="attr">    enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    shortname:</span> <span class="string">joanliao</span> <span class="comment">#剛剛設定的 Websitename</span></span><br><span class="line"><span class="attr">    count:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    disqus_username:</span> <span class="string">joanliao</span> <span class="comment"># " @ " 開頭的用戶名稱，但在這裡輸入時不用加 " @ "</span></span><br></pre></td></tr></table></figure>
 <h4 id="10-再開啟-themeshuweihuanglayoutaboutejs-檔案">10. 再開啟 themes/huweihuang/layout/about.ejs 檔案，</h4>
-<p>在以下的判斷式中輸入你的用戶名稱（ @ 開頭的，在 Disqus 點選右上方頭像的 View Profile 中有顯示）:<br>
+<p>在以下的判斷式中輸入你的用戶名稱（ &quot; @ &quot; 開頭的，在 Disqus 點選右上方頭像的 View Profile 中有顯示）:<br>
 <img src="https://imgur.com/JHN8wAS.png" alt="disqus10" title="disqus10"></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span>(config[<span class="string">'@username'</span>]) &#123; %&gt;</span><br></pre></td></tr></table></figure>
 <h4 id="11-在同一檔案中另一行輸入剛剛在-disqus-設定的-website-name">11. 在同一檔案中另一行輸入剛剛在 Disqus 設定的 Website Name</h4>
