@@ -16,29 +16,29 @@
     </url>
 
     <url>
-        <loc>https://joanliao.space/tags/Ruby-on-Rails/</loc>
-        <lastmod>2019-11-07T07:24:15.992Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://joanliao.space/tags/introspection/</loc>
-        <lastmod>2019-11-07T07:24:15.992Z</lastmod>
+        <loc>https://joanliao.space/tags/hexo/</loc>
+        <lastmod>2019-11-09T07:29:29.766Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://joanliao.space/tags/tech/</loc>
-        <lastmod>2019-11-09T07:29:29.766Z</lastmod>
+        <lastmod>2019-11-11T10:02:00.134Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://joanliao.space/tags/hexo/</loc>
-        <lastmod>2019-11-09T07:29:29.766Z</lastmod>
+        <loc>https://joanliao.space/tags/Ruby-on-Rails/</loc>
+        <lastmod>2019-11-11T10:02:00.134Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://joanliao.space/tags/introspection/</loc>
+        <lastmod>2019-11-11T10:02:00.134Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
