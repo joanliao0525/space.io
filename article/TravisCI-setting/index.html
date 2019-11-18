@@ -25,11 +25,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Oh My Wage 檢討會 - Joan&#39;s space
+          TravisCI_setting - Joan&#39;s space
         
     </title>
 
-    <link rel="canonical" href="https://joanliao.space/article/oh_my_wage_檢討會/">
+    <link rel="canonical" href="https://joanliao.space/article/TravisCI-setting/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -103,14 +103,12 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#tech" title="tech">tech</a>
-                            
                         </div>
-                        <h1>Oh My Wage 檢討會</h1>
-                        <h2 class="subheading">針對專案從無到結束的檢討記錄</h2>
+                        <h1>TravisCI_setting</h1>
+                        <h2 class="subheading">初次使用 Travis CI 設定</h2>
                         <span class="meta">
                             Posted by Joan Liao on
-                            2019-10-28
+                            2019-11-18
                         </span>
                     </div>
                 
@@ -226,98 +224,68 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h1 id="說在前面">說在前面</h1>
-<p>為讓彼此成為更好的人，請不吝嗇給予彼此真實的回饋與讚美，針對專案分組開始到結束，人、事、物皆可回饋。</p>
-<h2 id="小菜回饋">小菜回饋</h2>
-<h3 id="專案">專案</h3>
-<p>起初發想夢很大，覺得需要加入打卡、休假功能、勞健保試算…等，討論了一個禮拜多，當時進度是六組中最慢的，隨著時間遞減，壓力也越大，最後討論出以「打工薪資試算」為主。</p>
-<h4 id="問題點">問題點</h4>
-<ol>
-<li>花太多時間討論，進度停滯一週左右</li>
-<li>功能比預期少，略薄弱</li>
-</ol>
-<h4 id="解決方案">解決方案</h4>
-<ol>
-<li>直接分票開始做會更有效率</li>
-<li>依團隊 member 能力調整，當無法做更多功能時，策略改以行銷、包裝為主</li>
-</ol>
-<h3 id="給團隊成員的話">給團隊成員的話</h3>
-<p>起初大家對於 Rails、Git 不熟，在混亂中成長，隨著每天使用，逼自己成長時，Git 操作有比當初還清楚，對於需要完成的工作內容或交辦事項，也是一種磨合，沒人喜歡被管或限制，此時自律非常的重要，能否成為讓人放心交託，這時便知曉。</p>
-<p>在軟體工程師的路上，門檻確實比一般產業高許多，不論是技術或細心皆是，打錯一個字或少個標點符號，都會造成系統錯誤，未來工作時不會有人在一旁隨時提醒，在這條道路上，自我解決問題的能力比會那些技術來的更重要，期許大家都能成為獨當一面的工程師 :+1:</p>
-<h4 id="問題點">問題點</h4>
-<ol>
-<li>push GitHub 後，須自行檢查 Files changed 改了哪些檔案，沒人有義務幫你檢查</li>
-<li>養成主動和大家說發 pr 並描述這次 pr 做了什麼事情</li>
-<li>主動回報進度及預計完成時間</li>
-<li>每個人都要學會部署，改完的地方先自行部署測試，確認沒問題才發 pr (本地端測試 ok 不等於部署上去也 ok ，學會就是你的)</li>
-<li>修復完的 bug 務必自行測試過，並檢查原本功能是否好的變壞的</li>
-<li>養成自行解決問題的能力，而非請助教當打手，工作時要自己面對，該學的是助教如何解決問題，而非要答案</li>
-<li>養成主動找出問題、解決問題 (像是功能是否壞掉、RWD、多國語言下是否跑版等問題，想像成你就是使用者、評審，盡可能玩壞它並回報問題)</li>
-<li>討論正式時，Line 上面不建議丟貼圖</li>
-<li>討論時，找團隊成員一起開會，而非搞小團體，空間這麼小，看到會不會說而已 (大忌)</li>
-</ol>
-<hr>
-<h2 id="友渝回饋">友渝回饋</h2>
-<h3 id="專案">專案</h3>
-<p>這次的專案後端大部分都是小菜負責，我這邊除了 FactoryBot 之外就沒有幫忙到後端的事情，並且對於UI設計還有待加強，各方面都要繼續加油，這次的專案辛苦大家的努力付出，希望大家都對這個專案的成果滿意以及認識自己的不足，大家一起加油，在 coding 的路上繼續努力！</p>
-<h4 id="問題點">問題點</h4>
-<p>後端方面還需要再努力精進，前端的UI設計不夠成熟、考慮的不夠全面，對於原文文件的閱讀也需要加強。</p>
-<h4 id="解決方案">解決方案</h4>
-<p>後端目前在複習上課影片並操作，前端打算多練習切版和 UI 以外，加強學習 JS ，並且增加練習。</p>
-<hr>
-<h2 id="宥誠回饋">宥誠回饋</h2>
-<h3 id="專案">專案</h3>
-<p>自己在這次專案，沒有幫到什麼忙，辛苦小菜及各位carry，大家都辛苦了，就像評審分享的，自己還有很多不足的地方，要繼續加油，尤其小菜在這次專案，大家都知道你付出了很多辛苦了</p>
-<h4 id="問題點">問題點</h4>
-<p>對於專案的Code熟悉度不夠，看不懂其他人得Code，目前自己的能力較不足還許要彌補，pdf的gem部署上heroku的問題也是很多，未來再面對套件要研究更徹底些，git 版控有因為這次專案更了解了，對於助教方面知道自己的不足虛心受教會再努力</p>
-<h4 id="解決方案">解決方案</h4>
-<p>目前正在補足Rails的基本架構及用法，還有去研究其他人的code，彌補自己的不足</p>
-<hr>
-<h2 id="小派回饋">小派回饋</h2>
-<h3 id="專案">專案</h3>
-<p>剛開始沒參與到大家的討論，但已決定參加專案，決定大家想作主題後就全力配合，只希望自己別拖累大家就好</p>
-<h4 id="問題點">問題點</h4>
-<ol>
-<li>低估白天工作繁重程度，導致團隊討論時間無法投入，另外camp補課課程也delay</li>
-<li>i18n的跑版問題讓大家最後費心調整</li>
-</ol>
-<h4 id="解決方案">解決方案</h4>
-<ol>
-<li>評估自己接案要更謹慎，時間規劃要更清楚，以能完整參與團隊討論為優先，否則就專心補完課程</li>
-<li>i18n其實不難，可以一剛開始納入決定是否要做，也可以讓前後端在命名和排版更快速，有多的時間讓成員多做更多功能</li>
-</ol>
-<h3 id="給團隊成員">給團隊成員</h3>
-<p>雖然是目標前後端工程師，但前置作業的UX到UI的處理也要試著熟悉，也多看更多UI作品，好決定版面設計方向和溝通好命名原則，這樣在分工前端頁面處理，在推上去整合時更快更不容易有衝突</p>
-<hr>
-<h2 id="六角校長-回饋">六角校長 回饋</h2>
-<ol>
-<li>都要考慮使用者情境(手機、Pad、PC)</li>
-<li>提供測試帳號 (1、4)</li>
-<li>表單防呆 * 號、icon 辨識</li>
-<li>正式資料，不會認為是假網站</li>
-</ol>
-<h3 id="第一組-oh-my-wage內部系統">第一組 Oh my wage(內部系統)</h3>
-<ol>
-<li>建議提供測試帳號</li>
-<li>職員要新增時薪時數時，新增按鈕要放在上頭</li>
-<li>關鍵字搜尋 (placeholder 上可以有些提示內容)</li>
-<li>新增哈利波特，裡面就有資料</li>
-<li>NTD 有薪資時，不應該刪除，而是結清後才可以踢除。</li>
-<li>表單有系統</li>
-</ol>
+                <p><img src="/img/TravisCI-setting/travisci_00.png" alt="TravisCI" title="TravisCI"></p>
+<h2 id="travis-ci-介紹">Travis CI 介紹</h2>
+<blockquote>
+<p>Travis CI 是在軟體開發領域中的一個在線的，分布式的持續集成服務，用來構建及測試在 GitHub 託管的代碼。這個軟體的代碼同時也是開源的，可以在 GitHub 上下載到，儘管開發者當前並不推薦在閉源項目中單獨使用它。<br>
+它提供了多種程式語言的支持，包括 Ruby、JavaScript、Java、Scala、PHP、Haskell 和 Erlang 在內的多種語言。許多知名的開源項目使用它來在每次提交的時候進行構建測試，比如 Ruby on Rails，Ruby 和 Node.js。 — <a href="https://zh.wikipedia.org/wiki/Travis_CI" target="_blank" rel="noopener">Wikipedia</a></p>
+</blockquote>
+<p>Travis CI 設定完畢可以在使用者將程式碼上傳至 GitHub 時自動執行測試，包含使用者自己在其專案中寫的功能測試也可以在上傳時自動執行測試喔！<br>
+Travis CI 有分兩個網站，分別是 <a href="http://travis-ci.org" target="_blank" rel="noopener">travis-ci.org</a> 與 <a href="http://travis-ci.com" target="_blank" rel="noopener">travis-ci.com</a>，<br>
+<a href="http://travis-ci.org" target="_blank" rel="noopener">travis-ci.org</a> 可存取 public repository，若想存取 private repository 則需使用 <a href="http://travis-ci.com" target="_blank" rel="noopener">travis-ci.com</a>，但是兩個網站的設定步驟差不多，所以都可以參考喔！</p>
+<h2 id="網頁設定">網頁設定</h2>
+<p>使用 GitHub 帳戶登入<br>
+<img src="/img/TravisCI-setting/travisci_01.jpg" alt="TravisCI" title="TravisCI"></p>
+<p>首次登入需要同意授權功能及存取資料<br>
+<img src="/img/TravisCI-setting/travisci_02.jpg" alt="TravisCI" title="TravisCI"></p>
+<p>同意授權後會需要輸入一次 GitHub 的密碼<br>
+<img src="/img/TravisCI-setting/travisci_03.jpg" alt="TravisCI" title="TravisCI"></p>
+<p>隨後就會到以下頁面，接下來就直接前往  GitHub 頁面設定囉！<br>
+<img src="/img/TravisCI-setting/travisci_04.jpg" alt="TravisCI" title="TravisCI"></p>
+<p>右上角的頭像戳下去，點選 <code>Settings</code><br>
+<img src="/img/TravisCI-setting/travisci_05.jpg" alt="TravisCI" title="TravisCI"></p>
+<p>左邊選項分類清單點選 <code>Applications</code>，就會看到 Travis CI 並且點選他旁邊的 <code>Configure</code><br>
+<img src="/img/TravisCI-setting/travisci_06.jpg" alt="TravisCI" title="TravisCI"></p>
+<p>在最下方可以選擇是要將全部的 repository 授權給 Travis CI 或是只授權部分<br>
+<img src="/img/TravisCI-setting/travisci_07.jpg" alt="TravisCI" title="TravisCI"></p>
+<p>若是只授權部分，可以在這邊選擇要授權的 repository，日後想修改也都是可以的喔！<br>
+<img src="/img/TravisCI-setting/travisci_08.jpg" alt="TravisCI" title="TravisCI"></p>
+<p>設定完後會自動導向 Travis CI 的頁面<br>
+<img src="/img/TravisCI-setting/travisci_09.jpg" alt="TravisCI" title="TravisCI"></p>
+<p>以下有 <a href="http://travis-ci.com" target="_blank" rel="noopener">travis-ci.com</a> 和 <a href="http://travis-ci.org" target="_blank" rel="noopener">travis-ci.org</a> 兩個網站的設定頁面，可以看到 <a href="http://travis-ci.com" target="_blank" rel="noopener">travis-ci.com</a> 只看得到 GitHub 同意授權的 repository，<a href="http://travis-ci.org" target="_blank" rel="noopener">travis-ci.org</a> 則是看得到全部的 repository ，並且可以在此頁面中設定是否開啟測試功能</p>
+<p><a href="http://travis-ci.com" target="_blank" rel="noopener">travis-ci.com</a><br>
+<img src="/img/TravisCI-setting/travisci_10.jpg" alt="TravisCI" title="TravisCI"></p>
+<p><a href="http://travis-ci.org" target="_blank" rel="noopener">travis-ci.org</a><br>
+<img src="/img/TravisCI-setting/travisci_11.jpg" alt="TravisCI" title="TravisCI"></p>
+<p>在專案設定頁面的 <code>Webhooks</code> 中點選 <code>Edit</code> 可以做授權的細項設定，也可以看到最近傳送給 Travis CI 的測試封包紀錄及測試結果，會再封包名稱有一個小符號，如果是綠色勾勾就代表測試通過<br>
+<img src="/img/TravisCI-setting/travisci_12.jpg" alt="TravisCI" title="TravisCI"></p>
+<p>網頁設定到這邊就完成囉，接下來就是裝置設定！</p>
+<h2 id="裝置設定">裝置設定</h2>
+<p>將 Travis CI gem 加入 Gemfile 中，可以去 <a href="http://rubygem.org" target="_blank" rel="noopener">rubygem.org</a> 找最新版本</p>
+<figure class="highlight ruby"><figcaption><span>Gemfile</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">“ gem <span class="string">'travis'</span>, <span class="string">'~&gt; 1.8'</span>, <span class="string">'&gt;= 1.8.10'</span> “</span><br></pre></td></tr></table></figure>
+<p>存檔後執行<code>$bundle</code></p>
+<p>接下來在終端機中登入 Travis CI，下方終端機指令中的 <code>--pro</code> 只有當使用者授權的 Travis CI 網站為 <a href="http://travis-ci.com" target="_blank" rel="noopener">travis-ci.com</a> 時才會使用到，因為終端機預設的網站為 <a href="http://travis-ci.org" target="_blank" rel="noopener">travis-ci.org</a>，不是 <a href="http://travis-ci.com" target="_blank" rel="noopener">travis-ci.com</a>，所以會出現登入失敗的情況，這時候只要輸入 <code>$travis login --pro</code> 再登入一次就可以了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$travis</span> login --pro</span><br></pre></td></tr></table></figure>
+<p>成功登入之後就可以使用以下指令來產生 <code>.travis.yml</code> 檔案</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$travis</span> init</span><br></pre></td></tr></table></figure>
+<p>在 <code>.tavis.yml</code> 檔案中可輸入使用者所用的程式語言、資料庫類型及預設執行的指令，我這裡使用的是 Ruby on Rails 的專案，所以設定內容也適合專案內容相關的，官網上有文件可以更詳細的參考其他程式語言或資料庫的設定喔！<br>
+<a href="https://docs.travis-ci.com/" target="_blank" rel="noopener">Travis CI 詳細設定文件</a></p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">ruby</span></span><br><span class="line"><span class="attr">rvm:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="number">2.6</span><span class="number">.3</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">postgresql</span></span><br><span class="line"><span class="attr">env:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">DB</span> <span class="string">=</span> <span class="string">pgsql</span></span><br><span class="line"><span class="attr">before_script:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">psql</span> <span class="bullet">-c</span> <span class="string">'create database task_management_test;'</span> <span class="bullet">-U</span> <span class="string">postgres</span></span><br><span class="line"><span class="attr">script:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">bundle</span> <span class="string">exec</span> <span class="string">rake</span> <span class="attr">db:setup</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">RAILS_ENV=test</span> <span class="string">bundle</span> <span class="string">exec</span> <span class="string">rake</span> <span class="attr">db:migrate</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">bundle</span> <span class="string">exec</span> <span class="string">rake</span> <span class="string">spec</span></span><br></pre></td></tr></table></figure>
+<p>下方程式碼中資料庫的名稱和 <code>database.yml</code> 檔案中的是一樣的</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">default:</span> <span class="meta">&amp;default</span></span><br><span class="line"><span class="attr">  adapter:</span> <span class="string">postgresql</span></span><br><span class="line"><span class="attr">  encoding:</span> <span class="string">unicode</span></span><br><span class="line"><span class="attr">  pool:</span> &lt;%=<span class="ruby"> ENV.fetch(<span class="string">"RAILS_MAX_THREADS"</span>) &#123; <span class="number">5</span> &#125; </span>%&gt;</span><br><span class="line"><span class="attr">  timeout:</span> <span class="number">5000</span></span><br><span class="line"></span><br><span class="line"><span class="attr">development:</span></span><br><span class="line">  <span class="string">&lt;&lt;:</span> <span class="meta">*default</span></span><br><span class="line"><span class="attr">  database:</span> <span class="string">task_management_development</span></span><br><span class="line"></span><br><span class="line"><span class="attr">test:</span></span><br><span class="line">  <span class="string">&lt;&lt;:</span> <span class="meta">*default</span></span><br><span class="line"><span class="attr">  database:</span> <span class="string">task_management_test</span></span><br><span class="line"></span><br><span class="line"><span class="attr">production:</span></span><br><span class="line">  <span class="string">&lt;&lt;:</span> <span class="meta">*default</span></span><br><span class="line"><span class="attr">  database:</span> <span class="string">task_management_production</span></span><br></pre></td></tr></table></figure>
+<p>設定完後就可以 <code>git add .</code>、<code>git commit -m &quot;spec&quot;</code>、<code>git push</code>，接著到 GitHub 頁面查看剛上傳的 commit 點有沒有開始跑測試，如果開始測試，會有一個黃色點點，測試成功會變成綠色勾勾，失敗則是紅色叉叉，如果有順利出現測試符號就代表成功啦！<br>
+<img src="/img/TravisCI-setting/travisci_13.jpg" alt="TravisCI" title="TravisCI"></p>
+<p>在發 PR 時下方的 merge 按鈕就會變成這樣，下方也可以查看在這個 PR 當中每一個 commit 的測試結果是否成功<br>
+<img src="/img/TravisCI-setting/travisci_14.jpg" alt="TravisCI" title="TravisCI"></p>
 
                 
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/article/disquscommentsapi/" data-toggle="tooltip" data-placement="top" title="How to set Disqus comments API in Hexo blog ?">&larr; Previous Post</a>
-                        </li>
-                    
                     
                         <li class="next">
-                            <a href="/article/等待人生/" data-toggle="tooltip" data-placement="top" title="等待人生">Next Post &rarr;</a>
+                            <a href="/article/reflected_18_step6/" data-toggle="tooltip" data-placement="top" title="Reflected on my past mistakes.">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -364,7 +332,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#說在前面"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">&#x8AAA;&#x5728;&#x524D;&#x9762;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#小菜回饋"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">&#x5C0F;&#x83DC;&#x56DE;&#x994B;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#專案"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">&#x5C08;&#x6848;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#問題點"><span class="toc-nav-number">1.1.1.1.</span> <span class="toc-nav-text">&#x554F;&#x984C;&#x9EDE;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#解決方案"><span class="toc-nav-number">1.1.1.2.</span> <span class="toc-nav-text">&#x89E3;&#x6C7A;&#x65B9;&#x6848;</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#給團隊成員的話"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">&#x7D66;&#x5718;&#x968A;&#x6210;&#x54E1;&#x7684;&#x8A71;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#問題點"><span class="toc-nav-number">1.1.2.1.</span> <span class="toc-nav-text">&#x554F;&#x984C;&#x9EDE;</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#友渝回饋"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">&#x53CB;&#x6E1D;&#x56DE;&#x994B;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#專案"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">&#x5C08;&#x6848;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#問題點"><span class="toc-nav-number">1.2.1.1.</span> <span class="toc-nav-text">&#x554F;&#x984C;&#x9EDE;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#解決方案"><span class="toc-nav-number">1.2.1.2.</span> <span class="toc-nav-text">&#x89E3;&#x6C7A;&#x65B9;&#x6848;</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#宥誠回饋"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">&#x5BA5;&#x8AA0;&#x56DE;&#x994B;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#專案"><span class="toc-nav-number">1.3.1.</span> <span class="toc-nav-text">&#x5C08;&#x6848;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#問題點"><span class="toc-nav-number">1.3.1.1.</span> <span class="toc-nav-text">&#x554F;&#x984C;&#x9EDE;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#解決方案"><span class="toc-nav-number">1.3.1.2.</span> <span class="toc-nav-text">&#x89E3;&#x6C7A;&#x65B9;&#x6848;</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#小派回饋"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">&#x5C0F;&#x6D3E;&#x56DE;&#x994B;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#專案"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">&#x5C08;&#x6848;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#問題點"><span class="toc-nav-number">1.4.1.1.</span> <span class="toc-nav-text">&#x554F;&#x984C;&#x9EDE;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#解決方案"><span class="toc-nav-number">1.4.1.2.</span> <span class="toc-nav-text">&#x89E3;&#x6C7A;&#x65B9;&#x6848;</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#給團隊成員"><span class="toc-nav-number">1.4.2.</span> <span class="toc-nav-text">&#x7D66;&#x5718;&#x968A;&#x6210;&#x54E1;</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#六角校長-回饋"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">&#x516D;&#x89D2;&#x6821;&#x9577; &#x56DE;&#x994B;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#第一組-oh-my-wage內部系統"><span class="toc-nav-number">1.5.1.</span> <span class="toc-nav-text">&#x7B2C;&#x4E00;&#x7D44; Oh my wage(&#x5167;&#x90E8;&#x7CFB;&#x7D71;)</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#travis-ci-介紹"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Travis CI &#x4ECB;&#x7D39;</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#網頁設定"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">&#x7DB2;&#x9801;&#x8A2D;&#x5B9A;</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#裝置設定"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">&#x88DD;&#x7F6E;&#x8A2D;&#x5B9A;</span></a></li></ol>
         
         </div>
       </aside>
@@ -384,8 +352,6 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#tech" title="tech">tech</a>
-                        
                     </div>
                 </section>
                 

@@ -7,8 +7,8 @@
     </url>
 
     <url>
-        <loc>https://joanliao.space/article/reflected_18_step6/</loc>
-        <lastmod>2019-11-11T10:02:00.134Z</lastmod>
+        <loc>https://joanliao.space/article/TravisCI-setting/</loc>
+        <lastmod>2019-11-18T14:06:24.128Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -16,7 +16,15 @@
 
     <url>
         <loc>https://joanliao.space/article/disquscommentsapi/</loc>
-        <lastmod>2019-11-09T07:29:29.766Z</lastmod>
+        <lastmod>2019-11-15T09:55:21.052Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://joanliao.space/article/reflected_18_step6/</loc>
+        <lastmod>2019-11-11T10:02:00.134Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
