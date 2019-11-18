@@ -25,11 +25,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Reflected on my past mistakes. - Joan&#39;s space
+          Vue.js 筆記 - 01 - Joan&#39;s space
         
     </title>
 
-    <link rel="canonical" href="https://joanliao.space/article/reflected_18_step6/">
+    <link rel="canonical" href="https://joanliao.space/article/vuejs_biaoyansu_note01/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -105,16 +105,14 @@
                             
                               <a class="tag" href="/tags/#tech" title="tech">tech</a>
                             
-                              <a class="tag" href="/tags/#Ruby on Rails" title="Ruby on Rails">Ruby on Rails</a>
-                            
-                              <a class="tag" href="/tags/#introspection" title="introspection">introspection</a>
+                              <a class="tag" href="/tags/#Vue.js" title="Vue.js">Vue.js</a>
                             
                         </div>
-                        <h1>Reflected on my past mistakes.</h1>
-                        <h2 class="subheading">Those fooly mistakes i made in my project &#39;Task management&#39; part.1</h2>
+                        <h1>Vue.js 筆記 - 01</h1>
+                        <h2 class="subheading">Vue.js精讲 - 表严肃讲Vue - 1/1</h2>
                         <span class="meta">
                             Posted by Joan Liao on
-                            2019-11-07
+                            2019-11-01
                         </span>
                     </div>
                 
@@ -230,93 +228,7 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h4 id="第一次自己從頭生成一個專案犯的錯誤實在是自己都看不下去">第一次自己從頭生成一個專案，犯的錯誤實在是自己都看不下去，</h4>
-<h4 id="所以就來寫個匯總吧">所以就來寫個匯總吧😂</h4>
-<p><img src="https://imgur.com/UvVNoRp.png" alt="step06-1/7" title="dstep06-1/7"><br>
-助教大人🐤提點：</p>
-<blockquote>
-<p>「status 是 task 的一個欄位不是 table ，不應該出現在 table 的關聯設定裡。<br>
-建議閱讀：<a href="https://rails.ruby.tw/association_basics.html" target="_blank" rel="noopener">Active Record 關聯</a>」</p>
-</blockquote>
-<p>菜鳥🤦🏻‍♀️心得：</p>
-<blockquote>
-<p>在建立 model 時，欄位屬性鍵入 references，會自動產生關聯，所以再決定欄位屬性時要注意，若該欄位不是外部鍵，則無需使用 references 使用 integer 即可。</p>
-</blockquote>
-<p><img src="https://imgur.com/5Yu95zc.png" alt="step06-2/7" title="dstep06-2/7"><br>
-助教大人🐤提點：</p>
-<blockquote>
-<p>User 有很多的 Task ? 似乎漏掉關聯設定</p>
-</blockquote>
-<p>菜鳥🤦🏻‍♀️心得：</p>
-<blockquote>
-<p>粗心沒有檢查到，自己寫的 code 要檢查再檢查。</p>
-</blockquote>
-<p><img src="https://imgur.com/76rPeWP.png" alt="step06-3/7" title="dstep06-3/7"><br>
-助教大人🐤提點：</p>
-<blockquote>
-<p>view 不應該有 Task.new ，MVC 應該是將 controller 的變數 @task 放到 View<br>
-建議閱讀：<a href="https://railsbook.tw/chapters/10-mvc.html" target="_blank" rel="noopener">Model、View、Controller 三分天下</a></p>
-</blockquote>
-<p>菜鳥🤦🏻‍♀️心得：</p>
-<blockquote>
-<p>原本是為了功能正常顯示，但是這樣的做法是錯誤的，不只要考慮到可讀性，<br>
-還要考慮到維護的方便性以及 code 本身的慣例及用法，還需研讀更多文件。</p>
-</blockquote>
-<p><img src="https://imgur.com/EF72RTE.png" alt="step06-4/7" title="dstep06-4/7"><br>
-助教大人🐤提點：</p>
-<blockquote>
-<p>這裡的縮排看起來是四格空白，rails 慣例是兩個空白</p>
-</blockquote>
-<p>菜鳥🤦🏻‍♀️心得：</p>
-<blockquote>
-<p>可以直接在 VSCode 或其他程式碼編輯器中設定 tab 縮排的預設空格數，<br>
-且在寫 code 的過程中注意縮排及格式，遵照 Ruby on Rails 慣例走。</p>
-</blockquote>
-<p><img src="https://imgur.com/pae7EAw.png" alt="step06-5/7" title="dstep06-5/7"><br>
-助教大人🐤提點：</p>
-<blockquote>
-<p>建議這下面加一行空白增加可讀性</p>
-</blockquote>
-<p>菜鳥🤦🏻‍♀️心得：</p>
-<blockquote>
-<p>隨時檢查檔案內容是否遵照 Ruby on Rails 慣例，並且注意可讀性、舒適性。</p>
-</blockquote>
-<p><img src="https://imgur.com/3CeOycC.png" alt="step06-6/7" title="dstep06-6/7"><br>
-助教大人🐤提點：</p>
-<blockquote>
-<p><code>permit(:title,:description)</code> 這邊習慣上會寫這樣，<br>
-<code>permit(:title, :description)</code> 中間會多一個空格增加可讀性</p>
-</blockquote>
-<p>菜鳥🤦🏻‍♀️心得：</p>
-<blockquote>
-<p>同樣隨時檢查檔案內容是否遵照 Ruby on Rails 慣例，並且注意可讀性、舒適性。</p>
-</blockquote>
-<p><img src="https://imgur.com/1q6uNBK.png" alt="step06-7/7" title="dstep06-7/7"><br>
-助教大人🐤提點：</p>
-<blockquote>
-<p>注意縮排，但是有個問題，為什麼一直出現沒看過的新增，理論上一支 pr 除非被要求更改，<br>
-不然不會一直出現沒看過的新增檔案，還是說這些修改應該是下一隻 pr 的？ＱＱ</p>
-<ul>
-<li>讓應該在下一隻 pr 裡的變更不要出現在這個 pr 裡，</li>
-<li><code>git reset</code> 到想要的節點</li>
-<li><code>git stash -u</code> 可以暫存變更(-u 包含 untracked files)</li>
-<li><code>git stash pop</code> 或 <code>git stash apply</code> 可以拿出暫存(pop 拿出來之後 stash list 就不會有了)</li>
-<li>假如是想放在其他分支上以後也可以用 <code>git cherry-pick</code> 撿到想要的分支上。<br>
-建議閱讀：<a href="https://5xruby.tw/posts/git-interview" target="_blank" rel="noopener">Git 面試題</a></li>
-</ul>
-</blockquote>
-<p>菜鳥🤦🏻‍♀️心得：</p>
-<blockquote>
-<p>要多練習 git 指令，不要浪費好用的工具。</p>
-</blockquote>
-<p>助教大人🐤提點：</p>
-<blockquote>
-<p>修改好的話可以點 resolve conversation，這樣就可以知道哪些已經修改好了哪些還沒。</p>
-</blockquote>
-<p>菜鳥🤦🏻‍♀️心得：</p>
-<blockquote>
-<p>有空可以多多使用 GitHub 發掘功能，不要浪費好用的工具。</p>
-</blockquote>
+                <p>學習影片：<a href="https://biaoyansu.com/18.x" target="_blank" rel="noopener">Vue.js精讲 - 表严肃讲Vue</a></p>
 
                 
                 <hr>
@@ -324,12 +236,12 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/article/TravisCI_setting/" data-toggle="tooltip" data-placement="top" title="Travis CI setting">&larr; Previous Post</a>
+                            <a href="/article/change_site_icon/" data-toggle="tooltip" data-placement="top" title="How to change site icon ?">&larr; Previous Post</a>
                         </li>
                     
                     
                         <li class="next">
-                            <a href="/article/howtousebootstrapinrails6/" data-toggle="tooltip" data-placement="top" title="How to use Bootstrap in Rails 6 ?">Next Post &rarr;</a>
+                            <a href="/article/disqus_comments_api/" data-toggle="tooltip" data-placement="top" title="How to set Disqus comments API in Hexo blog ?">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -376,7 +288,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#第一次自己從頭生成一個專案犯的錯誤實在是自己都看不下去"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">&#x7B2C;&#x4E00;&#x6B21;&#x81EA;&#x5DF1;&#x5F9E;&#x982D;&#x751F;&#x6210;&#x4E00;&#x500B;&#x5C08;&#x6848;&#xFF0C;&#x72AF;&#x7684;&#x932F;&#x8AA4;&#x5BE6;&#x5728;&#x662F;&#x81EA;&#x5DF1;&#x90FD;&#x770B;&#x4E0D;&#x4E0B;&#x53BB;&#xFF0C;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#所以就來寫個匯總吧"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">&#x6240;&#x4EE5;&#x5C31;&#x4F86;&#x5BEB;&#x500B;&#x532F;&#x7E3D;&#x5427;&#x1F602;</span></a></li></ol>
+          <ol class="nav">none</ol>
         
         </div>
       </aside>
@@ -398,9 +310,7 @@
                        
                           <a class="tag" href="/tags/#tech" title="tech">tech</a>
                         
-                          <a class="tag" href="/tags/#Ruby on Rails" title="Ruby on Rails">Ruby on Rails</a>
-                        
-                          <a class="tag" href="/tags/#introspection" title="introspection">introspection</a>
+                          <a class="tag" href="/tags/#Vue.js" title="Vue.js">Vue.js</a>
                         
                     </div>
                 </section>

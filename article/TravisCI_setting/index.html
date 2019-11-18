@@ -25,11 +25,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Reflected on my past mistakes. - Joan&#39;s space
+          Travis CI setting - Joan&#39;s space
         
     </title>
 
-    <link rel="canonical" href="https://joanliao.space/article/reflected_18_step6/">
+    <link rel="canonical" href="https://joanliao.space/article/TravisCI_setting/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -103,18 +103,12 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#tech" title="tech">tech</a>
-                            
-                              <a class="tag" href="/tags/#Ruby on Rails" title="Ruby on Rails">Ruby on Rails</a>
-                            
-                              <a class="tag" href="/tags/#introspection" title="introspection">introspection</a>
-                            
                         </div>
-                        <h1>Reflected on my past mistakes.</h1>
-                        <h2 class="subheading">Those fooly mistakes i made in my project &#39;Task management&#39; part.1</h2>
+                        <h1>Travis CI setting</h1>
+                        <h2 class="subheading">初次使用 Travis CI 設定</h2>
                         <span class="meta">
                             Posted by Joan Liao on
-                            2019-11-07
+                            2019-11-18
                         </span>
                     </div>
                 
@@ -230,93 +224,59 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h4 id="第一次自己從頭生成一個專案犯的錯誤實在是自己都看不下去">第一次自己從頭生成一個專案，犯的錯誤實在是自己都看不下去，</h4>
-<h4 id="所以就來寫個匯總吧">所以就來寫個匯總吧😂</h4>
-<p><img src="https://imgur.com/UvVNoRp.png" alt="step06-1/7" title="dstep06-1/7"><br>
-助教大人🐤提點：</p>
+                <p><img src="/img/TravisCI-setting/travisci_00.png" alt="TravisCI" title="TravisCI"></p>
+<h2 id="travis-ci-介紹">Travis CI 介紹</h2>
 <blockquote>
-<p>「status 是 task 的一個欄位不是 table ，不應該出現在 table 的關聯設定裡。<br>
-建議閱讀：<a href="https://rails.ruby.tw/association_basics.html" target="_blank" rel="noopener">Active Record 關聯</a>」</p>
+<p>Travis CI 是在軟體開發領域中的一個在線的，分布式的持續集成服務，用來構建及測試在 GitHub 託管的代碼。這個軟體的代碼同時也是開源的，可以在 GitHub 上下載到，儘管開發者當前並不推薦在閉源項目中單獨使用它。<br>
+它提供了多種程式語言的支持，包括 Ruby、JavaScript、Java、Scala、PHP、Haskell 和 Erlang 在內的多種語言。許多知名的開源項目使用它來在每次提交的時候進行構建測試，比如 Ruby on Rails，Ruby 和 Node.js。 — <a href="https://zh.wikipedia.org/wiki/Travis_CI" target="_blank" rel="noopener">Wikipedia</a></p>
 </blockquote>
-<p>菜鳥🤦🏻‍♀️心得：</p>
-<blockquote>
-<p>在建立 model 時，欄位屬性鍵入 references，會自動產生關聯，所以再決定欄位屬性時要注意，若該欄位不是外部鍵，則無需使用 references 使用 integer 即可。</p>
-</blockquote>
-<p><img src="https://imgur.com/5Yu95zc.png" alt="step06-2/7" title="dstep06-2/7"><br>
-助教大人🐤提點：</p>
-<blockquote>
-<p>User 有很多的 Task ? 似乎漏掉關聯設定</p>
-</blockquote>
-<p>菜鳥🤦🏻‍♀️心得：</p>
-<blockquote>
-<p>粗心沒有檢查到，自己寫的 code 要檢查再檢查。</p>
-</blockquote>
-<p><img src="https://imgur.com/76rPeWP.png" alt="step06-3/7" title="dstep06-3/7"><br>
-助教大人🐤提點：</p>
-<blockquote>
-<p>view 不應該有 Task.new ，MVC 應該是將 controller 的變數 @task 放到 View<br>
-建議閱讀：<a href="https://railsbook.tw/chapters/10-mvc.html" target="_blank" rel="noopener">Model、View、Controller 三分天下</a></p>
-</blockquote>
-<p>菜鳥🤦🏻‍♀️心得：</p>
-<blockquote>
-<p>原本是為了功能正常顯示，但是這樣的做法是錯誤的，不只要考慮到可讀性，<br>
-還要考慮到維護的方便性以及 code 本身的慣例及用法，還需研讀更多文件。</p>
-</blockquote>
-<p><img src="https://imgur.com/EF72RTE.png" alt="step06-4/7" title="dstep06-4/7"><br>
-助教大人🐤提點：</p>
-<blockquote>
-<p>這裡的縮排看起來是四格空白，rails 慣例是兩個空白</p>
-</blockquote>
-<p>菜鳥🤦🏻‍♀️心得：</p>
-<blockquote>
-<p>可以直接在 VSCode 或其他程式碼編輯器中設定 tab 縮排的預設空格數，<br>
-且在寫 code 的過程中注意縮排及格式，遵照 Ruby on Rails 慣例走。</p>
-</blockquote>
-<p><img src="https://imgur.com/pae7EAw.png" alt="step06-5/7" title="dstep06-5/7"><br>
-助教大人🐤提點：</p>
-<blockquote>
-<p>建議這下面加一行空白增加可讀性</p>
-</blockquote>
-<p>菜鳥🤦🏻‍♀️心得：</p>
-<blockquote>
-<p>隨時檢查檔案內容是否遵照 Ruby on Rails 慣例，並且注意可讀性、舒適性。</p>
-</blockquote>
-<p><img src="https://imgur.com/3CeOycC.png" alt="step06-6/7" title="dstep06-6/7"><br>
-助教大人🐤提點：</p>
-<blockquote>
-<p><code>permit(:title,:description)</code> 這邊習慣上會寫這樣，<br>
-<code>permit(:title, :description)</code> 中間會多一個空格增加可讀性</p>
-</blockquote>
-<p>菜鳥🤦🏻‍♀️心得：</p>
-<blockquote>
-<p>同樣隨時檢查檔案內容是否遵照 Ruby on Rails 慣例，並且注意可讀性、舒適性。</p>
-</blockquote>
-<p><img src="https://imgur.com/1q6uNBK.png" alt="step06-7/7" title="dstep06-7/7"><br>
-助教大人🐤提點：</p>
-<blockquote>
-<p>注意縮排，但是有個問題，為什麼一直出現沒看過的新增，理論上一支 pr 除非被要求更改，<br>
-不然不會一直出現沒看過的新增檔案，還是說這些修改應該是下一隻 pr 的？ＱＱ</p>
-<ul>
-<li>讓應該在下一隻 pr 裡的變更不要出現在這個 pr 裡，</li>
-<li><code>git reset</code> 到想要的節點</li>
-<li><code>git stash -u</code> 可以暫存變更(-u 包含 untracked files)</li>
-<li><code>git stash pop</code> 或 <code>git stash apply</code> 可以拿出暫存(pop 拿出來之後 stash list 就不會有了)</li>
-<li>假如是想放在其他分支上以後也可以用 <code>git cherry-pick</code> 撿到想要的分支上。<br>
-建議閱讀：<a href="https://5xruby.tw/posts/git-interview" target="_blank" rel="noopener">Git 面試題</a></li>
-</ul>
-</blockquote>
-<p>菜鳥🤦🏻‍♀️心得：</p>
-<blockquote>
-<p>要多練習 git 指令，不要浪費好用的工具。</p>
-</blockquote>
-<p>助教大人🐤提點：</p>
-<blockquote>
-<p>修改好的話可以點 resolve conversation，這樣就可以知道哪些已經修改好了哪些還沒。</p>
-</blockquote>
-<p>菜鳥🤦🏻‍♀️心得：</p>
-<blockquote>
-<p>有空可以多多使用 GitHub 發掘功能，不要浪費好用的工具。</p>
-</blockquote>
+<p>Travis CI 設定完畢可以在使用者將程式碼上傳至 GitHub 時自動執行測試，包含使用者自己在其專案中寫的功能測試也可以在上傳時自動執行測試喔！<br>
+Travis CI 有分兩個網站，分別是 <a href="http://travis-ci.org" target="_blank" rel="noopener">travis-ci.org</a> 與 <a href="http://travis-ci.com" target="_blank" rel="noopener">travis-ci.com</a>，<br>
+<a href="http://travis-ci.org" target="_blank" rel="noopener">travis-ci.org</a> 可存取 public repository，若想存取 private repository 則需使用 <a href="http://travis-ci.com" target="_blank" rel="noopener">travis-ci.com</a>，但是兩個網站的設定步驟差不多，所以都可以參考喔！</p>
+<h2 id="網頁設定">網頁設定</h2>
+<p>使用 GitHub 帳戶登入<br>
+<img src="/img/TravisCI-setting/travisci_01.jpg" alt="TravisCI" title="TravisCI"></p>
+<p>首次登入需要同意授權功能及存取資料<br>
+<img src="/img/TravisCI-setting/travisci_02.jpg" alt="TravisCI" title="TravisCI"></p>
+<p>同意授權後會需要輸入一次 GitHub 的密碼<br>
+<img src="/img/TravisCI-setting/travisci_03.jpg" alt="TravisCI" title="TravisCI"></p>
+<p>隨後就會到以下頁面，接下來就直接前往  GitHub 頁面設定囉！<br>
+<img src="/img/TravisCI-setting/travisci_04.jpg" alt="TravisCI" title="TravisCI"></p>
+<p>右上角的頭像戳下去，點選 <code>Settings</code><br>
+<img src="/img/TravisCI-setting/travisci_05.jpg" alt="TravisCI" title="TravisCI"></p>
+<p>左邊選項分類清單點選 <code>Applications</code>，就會看到 Travis CI 並且點選他旁邊的 <code>Configure</code><br>
+<img src="/img/TravisCI-setting/travisci_06.jpg" alt="TravisCI" title="TravisCI"></p>
+<p>在最下方可以選擇是要將全部的 repository 授權給 Travis CI 或是只授權部分<br>
+<img src="/img/TravisCI-setting/travisci_07.jpg" alt="TravisCI" title="TravisCI"></p>
+<p>若是只授權部分，可以在這邊選擇要授權的 repository，日後想修改也都是可以的喔！<br>
+<img src="/img/TravisCI-setting/travisci_08.jpg" alt="TravisCI" title="TravisCI"></p>
+<p>設定完後會自動導向 Travis CI 的頁面<br>
+<img src="/img/TravisCI-setting/travisci_09.jpg" alt="TravisCI" title="TravisCI"></p>
+<p>以下有 <a href="http://travis-ci.com" target="_blank" rel="noopener">travis-ci.com</a> 和 <a href="http://travis-ci.org" target="_blank" rel="noopener">travis-ci.org</a> 兩個網站的設定頁面，可以看到 <a href="http://travis-ci.com" target="_blank" rel="noopener">travis-ci.com</a> 只看得到 GitHub 同意授權的 repository，<a href="http://travis-ci.org" target="_blank" rel="noopener">travis-ci.org</a> 則是看得到全部的 repository ，並且可以在此頁面中設定是否開啟測試功能</p>
+<p><a href="http://travis-ci.com" target="_blank" rel="noopener">travis-ci.com</a><br>
+<img src="/img/TravisCI-setting/travisci_10.jpg" alt="TravisCI" title="TravisCI"></p>
+<p><a href="http://travis-ci.org" target="_blank" rel="noopener">travis-ci.org</a><br>
+<img src="/img/TravisCI-setting/travisci_11.jpg" alt="TravisCI" title="TravisCI"></p>
+<p>在專案設定頁面的 <code>Webhooks</code> 中點選 <code>Edit</code> 可以做授權的細項設定，也可以看到最近傳送給 Travis CI 的測試封包紀錄及測試結果，會再封包名稱有一個小符號，如果是綠色勾勾就代表測試通過<br>
+<img src="/img/TravisCI-setting/travisci_12.jpg" alt="TravisCI" title="TravisCI"></p>
+<p>網頁設定到這邊就完成囉，接下來就是裝置設定！</p>
+<h2 id="裝置設定">裝置設定</h2>
+<p>將 Travis CI gem 加入 Gemfile 中，可以去 <a href="http://rubygem.org" target="_blank" rel="noopener">rubygem.org</a> 找最新版本</p>
+<figure class="highlight ruby"><figcaption><span>Gemfile</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">“ gem <span class="string">'travis'</span>, <span class="string">'~&gt; 1.8'</span>, <span class="string">'&gt;= 1.8.10'</span> “</span><br></pre></td></tr></table></figure>
+<p>存檔後執行<code>$bundle</code></p>
+<p>接下來在終端機中登入 Travis CI，下方終端機指令中的 <code>--pro</code> 只有當使用者授權的 Travis CI 網站為 <a href="http://travis-ci.com" target="_blank" rel="noopener">travis-ci.com</a> 時才會使用到，因為終端機預設的網站為 <a href="http://travis-ci.org" target="_blank" rel="noopener">travis-ci.org</a>，不是 <a href="http://travis-ci.com" target="_blank" rel="noopener">travis-ci.com</a>，所以會出現登入失敗的情況，這時候只要輸入 <code>$travis login --pro</code> 再登入一次就可以了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$travis</span> login --pro</span><br></pre></td></tr></table></figure>
+<p>成功登入之後就可以使用以下指令來產生 <code>.travis.yml</code> 檔案</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$travis</span> init</span><br></pre></td></tr></table></figure>
+<p>在 <code>.tavis.yml</code> 檔案中可輸入使用者所用的程式語言、資料庫類型及預設執行的指令，我這裡使用的是 Ruby on Rails 的專案，所以設定內容也適合專案內容相關的，官網上有文件可以更詳細的參考其他程式語言或資料庫的設定喔！<br>
+<a href="https://docs.travis-ci.com/" target="_blank" rel="noopener">Travis CI 詳細設定文件</a></p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">ruby</span></span><br><span class="line"><span class="attr">rvm:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="number">2.6</span><span class="number">.3</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">postgresql</span></span><br><span class="line"><span class="attr">env:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">DB</span> <span class="string">=</span> <span class="string">pgsql</span></span><br><span class="line"><span class="attr">before_script:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">psql</span> <span class="bullet">-c</span> <span class="string">'create database task_management_test;'</span> <span class="bullet">-U</span> <span class="string">postgres</span></span><br><span class="line"><span class="attr">script:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">bundle</span> <span class="string">exec</span> <span class="string">rake</span> <span class="attr">db:setup</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">RAILS_ENV=test</span> <span class="string">bundle</span> <span class="string">exec</span> <span class="string">rake</span> <span class="attr">db:migrate</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">bundle</span> <span class="string">exec</span> <span class="string">rake</span> <span class="string">spec</span></span><br></pre></td></tr></table></figure>
+<p>下方程式碼中資料庫的名稱和 <code>database.yml</code> 檔案中的是一樣的</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">default:</span> <span class="meta">&amp;default</span></span><br><span class="line"><span class="attr">  adapter:</span> <span class="string">postgresql</span></span><br><span class="line"><span class="attr">  encoding:</span> <span class="string">unicode</span></span><br><span class="line"><span class="attr">  pool:</span> &lt;%=<span class="ruby"> ENV.fetch(<span class="string">"RAILS_MAX_THREADS"</span>) &#123; <span class="number">5</span> &#125; </span>%&gt;</span><br><span class="line"><span class="attr">  timeout:</span> <span class="number">5000</span></span><br><span class="line"></span><br><span class="line"><span class="attr">development:</span></span><br><span class="line">  <span class="string">&lt;&lt;:</span> <span class="meta">*default</span></span><br><span class="line"><span class="attr">  database:</span> <span class="string">task_management_development</span></span><br><span class="line"></span><br><span class="line"><span class="attr">test:</span></span><br><span class="line">  <span class="string">&lt;&lt;:</span> <span class="meta">*default</span></span><br><span class="line"><span class="attr">  database:</span> <span class="string">task_management_test</span></span><br><span class="line"></span><br><span class="line"><span class="attr">production:</span></span><br><span class="line">  <span class="string">&lt;&lt;:</span> <span class="meta">*default</span></span><br><span class="line"><span class="attr">  database:</span> <span class="string">task_management_production</span></span><br></pre></td></tr></table></figure>
+<p>設定完後就可以 <code>git add .</code>、<code>git commit -m &quot;spec&quot;</code>、<code>git push</code>，接著到 GitHub 頁面查看剛上傳的 commit 點有沒有開始跑測試，如果開始測試，會有一個黃色點點，測試成功會變成綠色勾勾，失敗則是紅色叉叉，如果有順利出現測試符號就代表成功啦！<br>
+<img src="/img/TravisCI-setting/travisci_13.jpg" alt="TravisCI" title="TravisCI"></p>
+<p>在發 PR 時下方的 merge 按鈕就會變成這樣，下方也可以查看在這個 PR 當中每一個 commit 的測試結果是否成功<br>
+<img src="/img/TravisCI-setting/travisci_14.jpg" alt="TravisCI" title="TravisCI"></p>
 
                 
                 <hr>
@@ -324,12 +284,12 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/article/TravisCI_setting/" data-toggle="tooltip" data-placement="top" title="Travis CI setting">&larr; Previous Post</a>
+                            <a href="/article/change_database_in_rails/" data-toggle="tooltip" data-placement="top" title="Change database in Rails project">&larr; Previous Post</a>
                         </li>
                     
                     
                         <li class="next">
-                            <a href="/article/howtousebootstrapinrails6/" data-toggle="tooltip" data-placement="top" title="How to use Bootstrap in Rails 6 ?">Next Post &rarr;</a>
+                            <a href="/article/reflected_18_step6/" data-toggle="tooltip" data-placement="top" title="Reflected on my past mistakes.">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -376,7 +336,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#第一次自己從頭生成一個專案犯的錯誤實在是自己都看不下去"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">&#x7B2C;&#x4E00;&#x6B21;&#x81EA;&#x5DF1;&#x5F9E;&#x982D;&#x751F;&#x6210;&#x4E00;&#x500B;&#x5C08;&#x6848;&#xFF0C;&#x72AF;&#x7684;&#x932F;&#x8AA4;&#x5BE6;&#x5728;&#x662F;&#x81EA;&#x5DF1;&#x90FD;&#x770B;&#x4E0D;&#x4E0B;&#x53BB;&#xFF0C;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#所以就來寫個匯總吧"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">&#x6240;&#x4EE5;&#x5C31;&#x4F86;&#x5BEB;&#x500B;&#x532F;&#x7E3D;&#x5427;&#x1F602;</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#travis-ci-介紹"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Travis CI &#x4ECB;&#x7D39;</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#網頁設定"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">&#x7DB2;&#x9801;&#x8A2D;&#x5B9A;</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#裝置設定"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">&#x88DD;&#x7F6E;&#x8A2D;&#x5B9A;</span></a></li></ol>
         
         </div>
       </aside>
@@ -396,12 +356,6 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#tech" title="tech">tech</a>
-                        
-                          <a class="tag" href="/tags/#Ruby on Rails" title="Ruby on Rails">Ruby on Rails</a>
-                        
-                          <a class="tag" href="/tags/#introspection" title="introspection">introspection</a>
-                        
                     </div>
                 </section>
                 

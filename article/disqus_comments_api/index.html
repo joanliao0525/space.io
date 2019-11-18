@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151571578-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-151571578-1');
+    </script>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="joan liao">
+    <link rel="shortcut icon" href="/img/icon/whale-tail.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          How to set Disqus comments API in Hexo blog ? - Joan&#39;s space
+        
+    </title>
+
+    <link rel="canonical" href="https://joanliao.space/article/disqus_comments_api/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" href="/css/beantech.min.css">
+
+    <link rel="stylesheet" href="/css/donate.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url('/img/article_header/bookandcatlight.jpg')
+            /*post*/
+        
+    }
+    
+    #signature{
+        background-image: url('/img/signature/joan_sign.jpg');
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#tech" title="tech">tech</a>
+                            
+                              <a class="tag" href="/tags/#hexo" title="hexo">hexo</a>
+                            
+                        </div>
+                        <h1>How to set Disqus comments API in Hexo blog ?</h1>
+                        <h2 class="subheading">with using theme hexo-theme-huweihuang</h2>
+                        <span class="meta">
+                            Posted by Joan Liao on
+                            2019-10-28
+                        </span>
+                    </div>
+                
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Joan&#39;s space</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Modify by Yu-Hsuan Yen -->
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h2 id="如何在-hexo-的-hexo-theme-huweihuang-主題中使用-disqus-的功能">如何在 hexo 的 hexo-theme-huweihuang 主題中使用 Disqus 的功能：</h2>
+<h4 id="1-先到-disqus-註冊帳戶">1. 先到 Disqus 註冊帳戶</h4>
+<p><img src="https://imgur.com/GF3KC6S.png" alt="disqus01" title="disqus01"><br>
+<img src="https://imgur.com/bF8tUeF.png" alt="disqus02" title="disqus02"></p>
+<h4 id="2-選擇-i-want-to-install-disqus-on-my-site">2. 選擇 “ I want to install Disqus on my site ”</h4>
+<p><img src="https://imgur.com/1KMpLWa.png" alt="disqus03" title="disqus03"></p>
+<h4 id="3-填寫-website-name-這裡建議先填寫完整的網址-這樣填寫欄下方出現的網址也會是完整的網址">3. 填寫 Website Name ， 這裡建議先填寫完整的網址 ， 這樣填寫欄下方出現的網址也會是完整的網址</h4>
+<p>好啦其實是我強迫症 XD ，填寫完後點選 “ Create Site ”<br>
+<img src="https://imgur.com/LvDn1e7.png" alt="disqus04" title="disqus04"></p>
+<h4 id="4-這裡除非有付費功能的需求否則直接選擇-basic-基本免費方案就好">4. 這裡除非有付費功能的需求否則直接選擇 Basic 基本免費方案就好</h4>
+<p><img src="https://imgur.com/lTs4Pi3.png" alt="disqus05" title="disqus05"></p>
+<h4 id="5-因為-hexo-不在他列出的選項之中所以選擇最下方的-i-dont-see-my-platform-listed-install-manually-with-universal-code">5. 因為 Hexo 不在他列出的選項之中，所以選擇最下方的 “ I don’t see my platform listed, install manually with Universal Code ”</h4>
+<p><img src="https://imgur.com/d5g8h0q.png" alt="disqus06" title="disqus06"></p>
+<h4 id="6-這裡有兩段-code-可以複製第一段後面會用到之後點選-configure-進入設定頁面">6. 這裡有兩段 code 可以複製第一段，後面會用到，之後點選 “ Configure ” 進入設定頁面</h4>
+<p><img src="https://imgur.com/FsaFWTG.png" alt="disqus07" title="disqus07"></p>
+<h4 id="7-這裡的-website-name-可以打你方便設定的名字就好下方-website-url-則輸入你的-blog-網址輸入完點選-complete-setup">7. 這裡的 Website Name 可以打你方便設定的名字就好，下方 Website URL 則輸入你的 Blog 網址，輸入完點選 “ Complete Setup ”</h4>
+<p><img src="https://imgur.com/wWiIy9r.png" alt="disqus08" title="disqus08"></p>
+<h4 id="8-這裡的影片中會提到一些細節設定有需要再跟著影片去設定囉">8. 這裡的影片中會提到一些細節設定，有需要再跟著影片去設定囉！</h4>
+<p><img src="https://imgur.com/D2TJKtK.png" alt="disqus09" title="disqus09"></p>
+<h4 id="9-接下來移駕-visual-studio-code-或其他程式碼編輯器開啟-_configyml-檔案">9. 接下來，移駕 Visual Studio Code 或其他程式碼編輯器，開啟 _config.yml 檔案</h4>
+<p>加入以下這段（記得冒號“ : ”後面要空格）：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">disqus:</span></span><br><span class="line"><span class="attr">    enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    shortname:</span> <span class="string">joanliao</span> <span class="comment">#剛剛設定的 Websitename</span></span><br><span class="line"><span class="attr">    count:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>並且在同一檔案把以下這段 code 取消註解並且把對應欄位填上你的使用者名稱，以下是取消註解後的樣子：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Disqus settings</span></span><br><span class="line"><span class="attr">comments_provider:</span> <span class="string">disqus</span></span><br><span class="line"><span class="attr">disqus_username:</span> <span class="string">shortname</span> <span class="comment"># 不要寫用戶名稱，在這裡要輸入在 disqus 設定的 "shortname"</span></span><br></pre></td></tr></table></figure>
+<h4 id="10-再開啟-themeshuweihuanglayoutaboutejs-檔案">10. 再開啟 themes/huweihuang/layout/about.ejs 檔案</h4>
+<p>在以下的判斷式中輸入你的用戶名稱（ &quot; @ &quot; 開頭的，在 Disqus 點選右上方頭像的 View Profile 中有顯示）:</p>
+<p><img src="https://imgur.com/JHN8wAS.png" alt="disqus10" title="disqus10"></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span>(config[<span class="string">'@username'</span>]) &#123; %&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="11-在同一檔案中另一行輸入剛剛在-disqus-設定的-website-name">11. 在同一檔案中另一行輸入剛剛在 Disqus 設定的 Website Name</h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> disqus_shortname = <span class="string">"&lt;%= config['joanliao'] %&gt;"</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="12-開啟-themeshuweihuanglayoutpostejs-檔案">12. 開啟 themes/huweihuang/layout/post.ejs 檔案，</h4>
+<p>同樣的在以下的判斷式中輸入你的用戶名稱：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span>(config[<span class="string">'@username'</span>]) &#123; %&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="13-在同一檔案中找到以下這段-code-並且用剛剛複製的-code-覆蓋">13. 在同一檔案中找到以下這段 Code ，並且用剛剛複製的 Code 覆蓋：</h4>
+<p>連同判斷式也要覆蓋喔！</p>
+<p>覆蓋前：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span>(config[<span class="string">'disqus_username'</span>]) &#123; %&gt;</span><br><span class="line">&lt;!-- disqus embedded js code start (one page only need to embed once) --&gt;</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="comment">/* * * CONFIGURATION VARIABLES * * */</span></span><br><span class="line">    <span class="keyword">var</span> disqus_shortname = <span class="string">"&lt;%= config['disqus_username'] %&gt;"</span>;</span><br><span class="line">    <span class="keyword">var</span> disqus_identifier = <span class="string">"&lt;%= page.permalink %&gt;"</span>;</span><br><span class="line">    <span class="keyword">var</span> disqus_url = <span class="string">"&lt;%= page.permalink %&gt;"</span>;</span><br><span class="line"></span><br><span class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> dsq = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>); dsq.type = <span class="string">'text/javascript'</span>; dsq.async = <span class="literal">true</span>;</span><br><span class="line">        dsq.src = <span class="string">'//'</span> + disqus_shortname + <span class="string">'.disqus.com/embed.js'</span>;</span><br><span class="line">        (<span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>] || <span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>]).appendChild(dsq);</span><br><span class="line">    &#125;)();</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;!-- disqus embedded js code start end --&gt;</span></span><br><span class="line"><span class="regexp">&lt;% &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+<p>覆蓋後：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="comment">// DON'T EDIT BELOW THIS LINE</span></span><br><span class="line"><span class="keyword">var</span> d = <span class="built_in">document</span>, s = d.createElement(<span class="string">'script'</span>);</span><br><span class="line">&lt;!-- 這裡可以看到剛剛前面第 <span class="number">3</span> 步設定的網址，我覺得這樣的網址看起來比較合理XD --&gt;</span><br><span class="line">s.src = <span class="string">'https://joanliao.disqus.com/embed.js'</span>; </span><br><span class="line">s.setAttribute(<span class="string">'data-timestamp'</span>, +<span class="keyword">new</span> <span class="built_in">Date</span>());</span><br><span class="line">(d.head || d.body).appendChild(s);</span><br><span class="line">&#125;)();</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="https:/</span><span class="regexp">/disqus.com/</span>?ref_noscript<span class="string">"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="14-現在可以在終端機輸入-hexo-s-來查看是否運作順利囉">14. 現在可以在終端機輸入 <code>$ hexo s</code> 來查看是否運作順利囉！</h4>
+
+                
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/article/vuejs_biaoyansu_note01/" data-toggle="tooltip" data-placement="top" title="Vue.js 筆記 - 01">&larr; Previous Post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/article/oh_my_wage_檢討會/" data-toggle="tooltip" data-placement="top" title="Oh My Wage 檢討會">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <br>
+
+                <!--打赏-->
+                
+                <!--打赏-->
+
+                <!-- <br> -->
+                <!--分享-->
+                <!-- 
+                    <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
+                    <! --  css & js -- >
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                 -->
+                <!--分享-->
+                <br>                       
+                
+                <!-- require APlayer -->
+                
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+                <div id="disqus_thread"></div>
+                
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+  
+    <style>
+      span.toc-nav-number{
+        display: none
+      }
+    </style>
+  
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#如何在-hexo-的-hexo-theme-huweihuang-主題中使用-disqus-的功能"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">&#x5982;&#x4F55;&#x5728; hexo &#x7684; hexo-theme-huweihuang &#x4E3B;&#x984C;&#x4E2D;&#x4F7F;&#x7528; Disqus &#x7684;&#x529F;&#x80FD;&#xFF1A;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-先到-disqus-註冊帳戶"><span class="toc-nav-number">1.0.1.</span> <span class="toc-nav-text">1. &#x5148;&#x5230; Disqus &#x8A3B;&#x518A;&#x5E33;&#x6236;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-選擇-i-want-to-install-disqus-on-my-site"><span class="toc-nav-number">1.0.2.</span> <span class="toc-nav-text">2. &#x9078;&#x64C7; &#x201C; I want to install Disqus on my site &#x201D;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-填寫-website-name-這裡建議先填寫完整的網址-這樣填寫欄下方出現的網址也會是完整的網址"><span class="toc-nav-number">1.0.3.</span> <span class="toc-nav-text">3. &#x586B;&#x5BEB; Website Name &#xFF0C; &#x9019;&#x88E1;&#x5EFA;&#x8B70;&#x5148;&#x586B;&#x5BEB;&#x5B8C;&#x6574;&#x7684;&#x7DB2;&#x5740; &#xFF0C; &#x9019;&#x6A23;&#x586B;&#x5BEB;&#x6B04;&#x4E0B;&#x65B9;&#x51FA;&#x73FE;&#x7684;&#x7DB2;&#x5740;&#x4E5F;&#x6703;&#x662F;&#x5B8C;&#x6574;&#x7684;&#x7DB2;&#x5740;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-這裡除非有付費功能的需求否則直接選擇-basic-基本免費方案就好"><span class="toc-nav-number">1.0.4.</span> <span class="toc-nav-text">4. &#x9019;&#x88E1;&#x9664;&#x975E;&#x6709;&#x4ED8;&#x8CBB;&#x529F;&#x80FD;&#x7684;&#x9700;&#x6C42;&#x5426;&#x5247;&#x76F4;&#x63A5;&#x9078;&#x64C7; Basic &#x57FA;&#x672C;&#x514D;&#x8CBB;&#x65B9;&#x6848;&#x5C31;&#x597D;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#5-因為-hexo-不在他列出的選項之中所以選擇最下方的-i-dont-see-my-platform-listed-install-manually-with-universal-code"><span class="toc-nav-number">1.0.5.</span> <span class="toc-nav-text">5. &#x56E0;&#x70BA; Hexo &#x4E0D;&#x5728;&#x4ED6;&#x5217;&#x51FA;&#x7684;&#x9078;&#x9805;&#x4E4B;&#x4E2D;&#xFF0C;&#x6240;&#x4EE5;&#x9078;&#x64C7;&#x6700;&#x4E0B;&#x65B9;&#x7684; &#x201C; I don&#x2019;t see my platform listed, install manually with Universal Code &#x201D;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#6-這裡有兩段-code-可以複製第一段後面會用到之後點選-configure-進入設定頁面"><span class="toc-nav-number">1.0.6.</span> <span class="toc-nav-text">6. &#x9019;&#x88E1;&#x6709;&#x5169;&#x6BB5; code &#x53EF;&#x4EE5;&#x8907;&#x88FD;&#x7B2C;&#x4E00;&#x6BB5;&#xFF0C;&#x5F8C;&#x9762;&#x6703;&#x7528;&#x5230;&#xFF0C;&#x4E4B;&#x5F8C;&#x9EDE;&#x9078; &#x201C; Configure &#x201D; &#x9032;&#x5165;&#x8A2D;&#x5B9A;&#x9801;&#x9762;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#7-這裡的-website-name-可以打你方便設定的名字就好下方-website-url-則輸入你的-blog-網址輸入完點選-complete-setup"><span class="toc-nav-number">1.0.7.</span> <span class="toc-nav-text">7. &#x9019;&#x88E1;&#x7684; Website Name &#x53EF;&#x4EE5;&#x6253;&#x4F60;&#x65B9;&#x4FBF;&#x8A2D;&#x5B9A;&#x7684;&#x540D;&#x5B57;&#x5C31;&#x597D;&#xFF0C;&#x4E0B;&#x65B9; Website URL &#x5247;&#x8F38;&#x5165;&#x4F60;&#x7684; Blog &#x7DB2;&#x5740;&#xFF0C;&#x8F38;&#x5165;&#x5B8C;&#x9EDE;&#x9078; &#x201C; Complete Setup &#x201D;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#8-這裡的影片中會提到一些細節設定有需要再跟著影片去設定囉"><span class="toc-nav-number">1.0.8.</span> <span class="toc-nav-text">8. &#x9019;&#x88E1;&#x7684;&#x5F71;&#x7247;&#x4E2D;&#x6703;&#x63D0;&#x5230;&#x4E00;&#x4E9B;&#x7D30;&#x7BC0;&#x8A2D;&#x5B9A;&#xFF0C;&#x6709;&#x9700;&#x8981;&#x518D;&#x8DDF;&#x8457;&#x5F71;&#x7247;&#x53BB;&#x8A2D;&#x5B9A;&#x56C9;&#xFF01;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#9-接下來移駕-visual-studio-code-或其他程式碼編輯器開啟-_configyml-檔案"><span class="toc-nav-number">1.0.9.</span> <span class="toc-nav-text">9. &#x63A5;&#x4E0B;&#x4F86;&#xFF0C;&#x79FB;&#x99D5; Visual Studio Code &#x6216;&#x5176;&#x4ED6;&#x7A0B;&#x5F0F;&#x78BC;&#x7DE8;&#x8F2F;&#x5668;&#xFF0C;&#x958B;&#x555F; _config.yml &#x6A94;&#x6848;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#10-再開啟-themeshuweihuanglayoutaboutejs-檔案"><span class="toc-nav-number">1.0.10.</span> <span class="toc-nav-text">10. &#x518D;&#x958B;&#x555F; themes/huweihuang/layout/about.ejs &#x6A94;&#x6848;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#11-在同一檔案中另一行輸入剛剛在-disqus-設定的-website-name"><span class="toc-nav-number">1.0.11.</span> <span class="toc-nav-text">11. &#x5728;&#x540C;&#x4E00;&#x6A94;&#x6848;&#x4E2D;&#x53E6;&#x4E00;&#x884C;&#x8F38;&#x5165;&#x525B;&#x525B;&#x5728; Disqus &#x8A2D;&#x5B9A;&#x7684; Website Name</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#12-開啟-themeshuweihuanglayoutpostejs-檔案"><span class="toc-nav-number">1.0.12.</span> <span class="toc-nav-text">12. &#x958B;&#x555F; themes/huweihuang/layout/post.ejs &#x6A94;&#x6848;&#xFF0C;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#13-在同一檔案中找到以下這段-code-並且用剛剛複製的-code-覆蓋"><span class="toc-nav-number">1.0.13.</span> <span class="toc-nav-text">13. &#x5728;&#x540C;&#x4E00;&#x6A94;&#x6848;&#x4E2D;&#x627E;&#x5230;&#x4EE5;&#x4E0B;&#x9019;&#x6BB5; Code &#xFF0C;&#x4E26;&#x4E14;&#x7528;&#x525B;&#x525B;&#x8907;&#x88FD;&#x7684; Code &#x8986;&#x84CB;&#xFF1A;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#14-現在可以在終端機輸入-hexo-s-來查看是否運作順利囉"><span class="toc-nav-number">1.0.14.</span> <span class="toc-nav-text">14. &#x73FE;&#x5728;&#x53EF;&#x4EE5;&#x5728;&#x7D42;&#x7AEF;&#x6A5F;&#x8F38;&#x5165; <code>$ hexo s</code> &#x4F86;&#x67E5;&#x770B;&#x662F;&#x5426;&#x904B;&#x4F5C;&#x9806;&#x5229;&#x56C9;&#xFF01;</span></a></li></ol></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#tech" title="tech">tech</a>
+                        
+                          <a class="tag" href="/tags/#hexo" title="hexo">hexo</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://axelchen.com" target="_blank">Axel&#39;s blog</a></li>
+                    
+                        <li><a href="https://a-min.art" target="_blank">Aimee&#39;s blog</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+<script>
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://joanliao.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: '➜' 
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+<!-- chrome Firefox 中文锚点定位失效-->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<!-- smooth scroll behavior polyfill  -->
+<script type="text/javascript" src="/js/smoothscroll.js"></script>
+<script>
+        $('#toc').on('click','a',function(a){
+            // var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
+            // console.log(window.navigator.userAgent,isChrome)
+                // if(isChrome) {
+                    // console.log(a.currentTarget.outerHTML);
+                    // console.log($(a.currentTarget).attr("href"));
+                    //跳转到指定锚点
+                    // document.getElementById(a.target.innerText.toLowerCase()).scrollIntoView(true);
+                    document.getElementById($(a.currentTarget).attr("href").replace("#","")).scrollIntoView({behavior: 'smooth' });
+                // }
+        })  
+</script>
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                    <li>
+                        <a target="_blank" href="https://twitter.com/AAOcuttle">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/joanliao0525">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/joanliao0525">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://www.linkedin.com/in/joan-liao-344363aa">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Joan Liao 2019 
+                    <!-- <br>
+                    Theme by <a href="http://beantech.org">BeanTech</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    re-Ported by <a href="http://www.huweihuang.com">胡伟煌</a> | 
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huweihuang&repo=hexo-theme-huweihuang&type=star&count=true" >
+                    </iframe> -->
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://joanliao.space/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-151571578-1';
+    var _gaDomain = 'undefined';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+<!-- Image to hack wechat -->
+<img src="https://joanliao.space/img/signature/joan_sign.jpg" width="50px" height="50px" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
